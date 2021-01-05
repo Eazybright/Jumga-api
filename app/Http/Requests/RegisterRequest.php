@@ -11,7 +11,7 @@ class RegisterRequest extends BaseFormRequest
    */
   public function authorize()
   {
-    return false;
+    return true;
   }
 
   /**
@@ -25,10 +25,12 @@ class RegisterRequest extends BaseFormRequest
       'name' => 'string|required',
       'email' => 'email|required|unique:users,email',
       'password' => 'string|required',
-      'phone_number' => 'numeric|required|min:5|unique:users,phone',
+      'phone_number' => 'numeric|required|min:5|unique:users,phone_number',
       'role' => 'string|required',
       'account_number' => 'string|required',
-      'account_bank_name' => 'string|required'
+      'account_bank_name' => 'string|required',
+      'account_bank_code' => 'string|required',
+      'country' => 'string|required'
     ];
   }
 }

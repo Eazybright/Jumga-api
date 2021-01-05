@@ -51,7 +51,7 @@ class Handler extends ExceptionHandler
 
       // Get first validation error message
       $error = $first[0];
-      return $this->ErrorResponse($message, $error, 422);
+      return $this->ErrorResponse($error, $error, 422); 
     });
 
   }
