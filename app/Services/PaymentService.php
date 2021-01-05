@@ -35,11 +35,60 @@ class PaymentService
             'message' => $e->getMessage()
           );
     }
-
   }
 
-  public function verify_payment()
+  public function verify_payment($transaction_id)
   {
+    $client = new Client(); 
+    try {
+      $response = $client->request('GET', env('RAVE_API_URL').'transactions/'.$transaction_id.'/verify', [
+        'headers' => [
+          'Authorization' => 'Bearer ' .env('RAVE_SECRET_KEY'),
+          'Accept'        => 'application/json',
+        ]
+      ]);
 
+      if (intval($response->getStatusCode()) === 200) {
+        $result = json_decode($response->getBody(), true);
+        return $result['data'];
+      }else{ 
+        return  array(
+          'status' => false,
+          'message' => "unable to verify payment"
+        );
+      }       
+    }catch (\Exception $e) {
+      return  array(
+            'status' => false,
+            'message' => $e->getMessage()
+          );
+    }
+  }
+
+  public function get_all_transactions()
+  {
+    $client = new Client(); 
+    try {
+      $response = $client->request('GET', env('RAVE_API_URL').'transactions', [
+        'headers' => [
+          'Authorization' => 'Bearer ' .env('RAVE_SECRET_KEY'),
+          'Accept'        => 'application/json',
+        ],
+        'query' => [
+          'from' => '2021-01-01',
+          'to' => '2021-01-14'
+        ]
+      ]);
+      $result = json_decode($response->getBody(), true);
+      return  array(
+            'status' => true,
+            'data' => $result
+          );       
+    }catch (\Exception $e) {
+      return  array(
+            'status' => false,
+            'message' => $e->getMessage()
+          );
+    }
   }
 }

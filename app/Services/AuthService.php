@@ -24,18 +24,32 @@ class AuthService
        // verify seller payment to register a shop 
       // also upload image of the store to cloudinary
       if($params['role'] == Role::SELLER){
+        if(!isset($params['image']) || !isset($params['transaction_id'])){
+          return  array(
+            'status' => false,
+            'message' => "image or transaction_id params is required"
+          );
+        }
+
+        $verify_payment = $this->paymentService->verify_payment($params['transaction_id']);
+        if(isset($verify_payment['status']) && $verify_payment['status'] == false ){
+          DB::rollback();
+          return $verify_payment;
+        }
         
       }
 
       //create a payment subaccount for seller and rider
-      $subaccount = $this->paymentService->create_subaccount($params);
-      if(isset($subaccount['status']) && $subaccount['status'] == false ){
-        DB::rollback();
-        return $subaccount;
-      }
-      $params['flutterwave_subaccount_id'] = $subaccount;
+      // $subaccount = $this->paymentService->create_subaccount($params);
+      // if(isset($subaccount['status']) && $subaccount['status'] == false ){
+      //   DB::rollback();
+      //   return $subaccount;
+      // }
+      // $params['flutterwave_subaccount_id'] = $subaccount;
+      $params['verify_payment'] = $verify_payment;
       //create account into the database
       DB::commit();
+      return $params;
     }catch(\Exception $e){
       DB::rollback();
       throw $e;
