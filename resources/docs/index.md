@@ -1,5 +1,5 @@
 ---
-title: Laravel Documentation
+title: JUMGA FOR FLUTTERWAVE API
 
 language_tabs:
 - bash
@@ -23,12 +23,9 @@ toc_footers:
 
 # Introduction
 
-
+This is the api docs for backend implementation
 
 This documentation aims to provide all the information you need to work with our API.
-
-<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
-You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 <script>

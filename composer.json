@@ -13,7 +13,10 @@
     "fideloper/proxy": "^4.4",
     "fruitcake/laravel-cors": "^2.0",
     "guzzlehttp/guzzle": "^7.0.1",
+    "jrm2k6/cloudder": "^0.6.0",
+    "kingflamez/laravelrave": "^3.0",
     "laravel/framework": "^8.12",
+    "laravel/passport": "^10.1",
     "laravel/tinker": "^2.5"
   },
   "require-dev": {
