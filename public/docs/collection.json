@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "JUMGA FOR FLUTTERWAVE API",
-        "_postman_id": "f64c1de9-63c9-4d14-b8d3-cf447865d1ad",
+        "_postman_id": "73545bdf-eb40-466e-8e5a-5d53881ed09d",
         "description": "This is the api docs for backend implementation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"rerum\",\n    \"email\": \"occaecati\",\n    \"password\": \"ipsum\",\n    \"phone_number\": \"neque\",\n    \"role\": \"repudiandae\",\n    \"account_number\": \"dolore\",\n    \"account_name\": \"qui\",\n    \"account_bank_code\": 1,\n    \"country\": \"incidunt\",\n    \"image\": \"ducimus\",\n    \"transaction_id\": 14,\n    \"location\": \"fuga\",\n    \"description\": \"nemo\",\n    \"name_of_store\": \"ex\"\n}"
+                            "raw": "{\n    \"name\": \"aspernatur\",\n    \"email\": \"aut\",\n    \"password\": \"eos\",\n    \"phone_number\": \"explicabo\",\n    \"role\": \"enim\",\n    \"account_number\": \"animi\",\n    \"account_name\": \"et\",\n    \"account_bank_code\": 3,\n    \"country\": \"omnis\",\n    \"image\": \"est\",\n    \"transaction_id\": 9,\n    \"location\": \"dolore\",\n    \"description\": \"maiores\",\n    \"name_of_store\": \"quia\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -74,7 +74,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"labore\",\n    \"password\": \"et\"\n}"
+                            "raw": "{\n    \"email\": \"officiis\",\n    \"password\": \"consectetur\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -247,7 +247,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "et",
+                                    "value": "molestiae",
                                     "description": ""
                                 }
                             ]
@@ -371,7 +371,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "totam",
+                                    "value": "sapiente",
                                     "description": ""
                                 }
                             ]
@@ -408,7 +408,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "non",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -532,41 +532,12 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "vel",
+                                    "value": "esse",
                                     "description": ""
                                 }
                             ]
                         },
                         "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "api\/user",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/user",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/user"
-                        },
-                        "method": "GET",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -611,6 +582,38 @@
                         "auth": {
                             "type": "noauth"
                         }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "User Management",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get User details\nGet all details about a user - seller",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
                     },
                     "response": []
                 }

@@ -7,5 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Store extends Model
 {
-    use HasFactory;
+  use HasFactory;
+
+  protected $table = 'stores';
+
+  public function user()
+  {
+    return $this->belongsTo('App\Models\User', 'user_id');
+  }
+
+  public function rider()
+  {
+    return $this->belongsTo('App\Models\User', 'dispatch_rider_id');
+  }
 }

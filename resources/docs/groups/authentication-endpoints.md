@@ -14,7 +14,7 @@ curl -X POST \
     "http://localhost/api/auth/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"rerum","email":"occaecati","password":"ipsum","phone_number":"neque","role":"repudiandae","account_number":"dolore","account_name":"qui","account_bank_code":1,"country":"incidunt","image":"ducimus","transaction_id":14,"location":"fuga","description":"nemo","name_of_store":"ex"}'
+    -d '{"name":"aspernatur","email":"aut","password":"eos","phone_number":"explicabo","role":"enim","account_number":"animi","account_name":"et","account_bank_code":3,"country":"omnis","image":"est","transaction_id":9,"location":"dolore","description":"maiores","name_of_store":"quia"}'
 
 ```
 
@@ -29,20 +29,20 @@ let headers = {
 };
 
 let body = {
-    "name": "rerum",
-    "email": "occaecati",
-    "password": "ipsum",
-    "phone_number": "neque",
-    "role": "repudiandae",
-    "account_number": "dolore",
-    "account_name": "qui",
-    "account_bank_code": 1,
-    "country": "incidunt",
-    "image": "ducimus",
-    "transaction_id": 14,
-    "location": "fuga",
-    "description": "nemo",
-    "name_of_store": "ex"
+    "name": "aspernatur",
+    "email": "aut",
+    "password": "eos",
+    "phone_number": "explicabo",
+    "role": "enim",
+    "account_number": "animi",
+    "account_name": "et",
+    "account_bank_code": 3,
+    "country": "omnis",
+    "image": "est",
+    "transaction_id": 9,
+    "location": "dolore",
+    "description": "maiores",
+    "name_of_store": "quia"
 }
 
 fetch(url, {
@@ -169,7 +169,7 @@ curl -X POST \
     "http://localhost/api/auth/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"labore","password":"et"}'
+    -d '{"email":"officiis","password":"consectetur"}'
 
 ```
 
@@ -184,8 +184,8 @@ let headers = {
 };
 
 let body = {
-    "email": "labore",
-    "password": "et"
+    "email": "officiis",
+    "password": "consectetur"
 }
 
 fetch(url, {
