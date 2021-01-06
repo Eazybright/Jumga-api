@@ -32,13 +32,13 @@ trait ApiResponseMessage
     return $response->withSingleItem(collect($error_data), 500);
   }
 
-  public function SuccessResponse($data=[])
+  public function SuccessResponse($data=[], $message='Successful')
   {
     $response = new Response;
     
     $success_data = [
       'status' => true,
-      'message' => 'Successful',
+      'message' => $message,
       'data' => $data
     ];
 

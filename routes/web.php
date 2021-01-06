@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/all_transactions', 'TransactionController@getAllTransactions');
+// Route::get('/all_transactions', 'TransactionController@getAllTransactions');
