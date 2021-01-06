@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
       $table->string('phone_number');
       $table->string('password');
       $table->string('account_number')->nullable();
-      $table->string('account_bank_name')->nullable();
+      $table->string('account_name')->nullable();
       $table->string('account_bank_code')->nullable();
       $table->string('country')->nullable();
       $table->string('flutterwave_subaccount_id')->nullable();

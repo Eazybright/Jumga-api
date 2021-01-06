@@ -2,7 +2,7 @@
 
 namespace App\Constants;
 
-class role
+class Role
 {
   const SELLER = 'seller';
   const DISPATCH_RIDER = 'rider';

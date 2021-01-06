@@ -20,11 +20,13 @@ class CreateStoresTable extends Migration
       $table->string('location');
       $table->text('description');
       $table->unsignedBigInteger('user_id');
+      $table->unsignedBigInteger('dispatch_rider_id');
       $table->timestamps();
     });
 
     Schema::table('stores', function(Blueprint $table){
       $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+      $table->foreign('dispatch_rider_id')->references('id')->on('users')->onDelete('cascade');
     });
   }
 

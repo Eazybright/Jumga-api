@@ -3,10 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-// use Illuminate\Http\Request;
-use App\Http\Response;
-// use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\MessageBag;
 use App\Http\Requests\RegisterRequest;
 use App\Traits\ApiResponseMessage;
 use App\Services\AuthService;
