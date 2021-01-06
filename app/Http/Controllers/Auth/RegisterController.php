@@ -8,7 +8,7 @@ use App\Traits\ApiResponseMessage;
 use App\Services\AuthService;
 
 /**
- * @group Authentication endpoints
+ * @group Authentication
  */
 class RegisterController extends Controller
 {

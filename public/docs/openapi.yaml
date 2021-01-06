@@ -5,7 +5,7 @@ info:
     version: 1.0.0
 servers:
     -
-        url: 'http://localhost'
+        url: 'https://jumga-flutterwave-solution-api.herokuapp.com'
 paths:
     /api/auth/register:
         post:
@@ -42,7 +42,7 @@ paths:
                                     message: { type: string, example: Successful }
                                     data: { type: string, example: 'Registration successfull' }
             tags:
-                - 'Authentication endpoints'
+                - Authentication
             requestBody:
                 required: true
                 content:
@@ -53,59 +53,59 @@ paths:
                                 name:
                                     type: string
                                     description: 'The fullname of the user'
-                                    example: aspernatur
+                                    example: sit
                                 email:
                                     type: email
                                     description: 'The email of the user'
-                                    example: aut
+                                    example: sit
                                 password:
                                     type: password
                                     description: 'The password of the user account'
-                                    example: eos
+                                    example: iste
                                 phone_number:
                                     type: numeric
                                     description: 'The phone number of the user'
-                                    example: explicabo
+                                    example: harum
                                 role:
                                     type: string
                                     description: 'The role of the user either seller or rider'
-                                    example: enim
+                                    example: harum
                                 account_number:
                                     type: The
                                     description: 'account number of the user'
-                                    example: animi
+                                    example: qui
                                 account_name:
                                     type: string
                                     description: 'The bank account name of the user'
-                                    example: et
+                                    example: voluptates
                                 account_bank_code:
                                     type: integer
                                     description: 'The bank code of the user preferred bank'
-                                    example: 3
+                                    example: 16
                                 country:
                                     type: string
                                     description: 'The country of residence of the user'
-                                    example: omnis
+                                    example: nemo
                                 image:
                                     type: filepath
                                     description: 'The cover image for the store'
-                                    example: est
+                                    example: dolores
                                 transaction_id:
                                     type: integer
                                     description: 'This is the transaction_id of the payment evidence (you can get this during the payment callback - `data.id`)'
-                                    example: 9
+                                    example: 15
                                 location:
                                     type: string
                                     description: 'The location of the store'
-                                    example: dolore
+                                    example: eos
                                 description:
                                     type: string
                                     description: 'The description of the store'
-                                    example: maiores
+                                    example: ut
                                 name_of_store:
                                     type: string
                                     description: 'The name of the store'
-                                    example: quia
+                                    example: quasi
                             required:
                                 - name
                                 - email
@@ -156,7 +156,7 @@ paths:
                                     message: { type: string, example: 'User authenticated' }
                                     data: { type: object, example: { user: { id: 4, name: 'kolawole Ezekiel', email: donea1@gmail.com, role: seller, phone_number: '08135306027', account_number: '0228435513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: kskjks_YRHJF, email_verified_at: '2021-01-06T18:46:33.000000Z', created_at: '2021-01-06T18:46:33.000000Z', updated_at: '2021-01-06T18:46:46.000000Z' }, token: AAAA-TOKEN, token_type: Bearer, expires_at: '2021-01-06 21:19:45' } }
             tags:
-                - 'Authentication endpoints'
+                - Authentication
             requestBody:
                 required: true
                 content:
@@ -167,11 +167,11 @@ paths:
                                 email:
                                     type: email
                                     description: 'The email of the user'
-                                    example: officiis
+                                    example: quisquam
                                 password:
                                     type: password
                                     description: 'The password of the user account'
-                                    example: consectetur
+                                    example: magni
                             required:
                                 - email
                                 - password
@@ -353,7 +353,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: molestiae
+                example: ratione
                 required: true
                 schema:
                     type: string
@@ -493,7 +493,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: sapiente
+                example: maiores
                 required: true
                 schema:
                     type: string
@@ -629,7 +629,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: esse
+                example: id
                 required: true
                 schema:
                     type: string
@@ -698,4 +698,4 @@ paths:
                                     message: { type: string, example: Successful }
                                     data: { type: object, example: { id: 4, name: 'kolawole Ezekiel', email: doneazy911@gmail.com, role: seller, phone_number: '08135306027', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T18:46:33.000000Z', created_at: '2021-01-06T18:46:33.000000Z', updated_at: '2021-01-06T18:46:46.000000Z', store: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z', rider: { id: 2, name: 'Dispatch Rider 2', email: doneazy2@gmail.com, role: rider, phone_number: '08135306035', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T17:55:31.000000Z', created_at: '2021-01-06T17:55:31.000000Z', updated_at: '2021-01-06T17:55:31.000000Z' } } } }
             tags:
-                - 'User Management'
+                - 'User dashboard'

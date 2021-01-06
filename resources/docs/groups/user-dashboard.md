@@ -1,4 +1,4 @@
-# User Management
+# User dashboard
 
 
 ## Get User details
@@ -12,14 +12,14 @@ Get all details about a user - seller
 
 ```bash
 curl -X GET \
-    -G "http://localhost/api/user" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/api/user"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/user"
 );
 
 let headers = {

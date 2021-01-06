@@ -7,7 +7,7 @@ use App\Repositories\Interfaces\UserRepositoryInterface;
 use App\Traits\ApiResponseMessage;
 
 /**
- * @group User Management
+ * @group User dashboard
  */
 class UserController extends Controller
 {

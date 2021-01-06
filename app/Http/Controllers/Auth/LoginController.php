@@ -11,7 +11,7 @@ use App\Services\AuthService;
 use Carbon\Carbon;
 
 /**
- * @group Authentication endpoints
+ * @group Authentication
  */
 class LoginController extends Controller
 {
