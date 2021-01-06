@@ -21,6 +21,14 @@ class User extends Authenticatable
     'name',
     'email',
     'password',
+    'name',
+    'phone_number',
+    'role',
+    'account_number',
+    'account_bank_name',
+    'account_bank_code',
+    'flutterwave_subaccount_id',
+    'country'
   ];
 
   /**
