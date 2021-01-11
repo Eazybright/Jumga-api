@@ -18,4 +18,9 @@ class StoreRepository implements StoreRepositoryInterface
     $new_store->dispatch_rider_id = mt_rand(1,3); //assign dispatch rider id between 1 and 3
     return $new_store->save();
   }
+
+  public function checkIfIdExists($store_id)
+  {
+    return Store::where('id', $store_id)->exists();
+  }
 }

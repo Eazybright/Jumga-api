@@ -25,4 +25,12 @@ Route::group(['prefix' => '/auth', 'namespace' => 'Auth'], function(){
 
 Route::group(['middleware' => 'auth:api'], function(){
   Route::get('/user', 'UserController@get_user_details');
+
+  Route::group(['prefix' => 'products'], function(){
+      // Route::get('/', 'HostelController@index');
+    Route::post('/', 'ProductsController@store');
+      // Route::put('/{hostel_id}', 'HostelController@update');
+      // Route::get('/:id', 'HostelController@getHostel');
+      // Route::delete('/:id', 'HostelController@delete');
+  });
 });

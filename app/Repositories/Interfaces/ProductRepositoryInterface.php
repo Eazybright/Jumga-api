@@ -2,9 +2,7 @@
 
 namespace App\Repositories\Interfaces;
 
-interface StoreRepositoryInterface
+interface ProductRepositoryInterface
 {
   public function save($params, $user_id);
-
-  public function checkIfIdExists($store_id);
 }

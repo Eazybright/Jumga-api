@@ -53,6 +53,5 @@ class Handler extends ExceptionHandler
       $error = $first[0];
       return $this->ErrorResponse($error, $error, 422); 
     });
-
   }
 }
