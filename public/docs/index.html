@@ -44,7 +44,7 @@
                             <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
                     </ul>
             <ul class="toc-footer" id="last-updated">
-            <li>Last updated: January 6 2021</li>
+            <li>Last updated: January 11 2021</li>
         </ul>
 </div>
 <div class="page-wrapper">
@@ -55,13 +55,13 @@
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 <script>
-    var baseUrl = "https://jumga-flutterwave-solution-api.herokuapp.com/";
+    var baseUrl = "http://localhost:8000";
 </script>
 <script src="js/tryitout-2.4.2.js"></script>
 <blockquote>
 <p>Base URL</p>
 </blockquote>
-<pre><code class="language-yaml">https://jumga-flutterwave-solution-api.herokuapp.com/</code></pre><h1>Authenticating requests</h1>
+<pre><code class="language-yaml">http://localhost:8000</code></pre><h1>Authenticating requests</h1>
 <p>This API is not authenticated.</p><h1>Authentication</h1>
 <h2>Register</h2>
 <p>Seller signs up on our platform</p>
@@ -69,13 +69,13 @@
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/register" \
+    "http://localhost:8000/api/auth/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"sit","email":"sit","password":"iste","phone_number":"harum","role":"harum","account_number":"qui","account_name":"voluptates","account_bank_code":16,"country":"nemo","image":"dolores","transaction_id":15,"location":"eos","description":"ut","name_of_store":"quasi"}'
+    -d '{"name":"rerum","email":"officiis","password":"sequi","phone_number":"sunt","role":"sed","account_number":"vero","account_name":"aut","account_bank_code":15,"country":"nisi","image":"eum","transaction_id":6,"location":"sit","description":"aut","name_of_store":"nulla"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/register"
+    "http://localhost:8000/api/auth/register"
 );
 
 let headers = {
@@ -84,20 +84,20 @@ let headers = {
 };
 
 let body = {
-    "name": "sit",
-    "email": "sit",
-    "password": "iste",
-    "phone_number": "harum",
-    "role": "harum",
-    "account_number": "qui",
-    "account_name": "voluptates",
-    "account_bank_code": 16,
-    "country": "nemo",
-    "image": "dolores",
-    "transaction_id": 15,
-    "location": "eos",
-    "description": "ut",
-    "name_of_store": "quasi"
+    "name": "rerum",
+    "email": "officiis",
+    "password": "sequi",
+    "phone_number": "sunt",
+    "role": "sed",
+    "account_number": "vero",
+    "account_name": "aut",
+    "account_bank_code": 15,
+    "country": "nisi",
+    "image": "eum",
+    "transaction_id": 6,
+    "location": "sit",
+    "description": "aut",
+    "name_of_store": "nulla"
 }
 
 fetch(url, {
@@ -211,13 +211,13 @@ The name of the store</p>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/login" \
+    "http://localhost:8000/api/auth/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"quisquam","password":"magni"}'
+    -d '{"email":"praesentium","password":"alias"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/login"
+    "http://localhost:8000/api/auth/login"
 );
 
 let headers = {
@@ -226,8 +226,8 @@ let headers = {
 };
 
 let body = {
-    "email": "quisquam",
-    "password": "magni"
+    "email": "praesentium",
+    "password": "alias"
 }
 
 fetch(url, {
@@ -299,11 +299,11 @@ The password of the user account</p>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize" \
+    -G "http://localhost:8000/oauth/authorize" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize"
+    "http://localhost:8000/oauth/authorize"
 );
 
 let headers = {
@@ -778,11 +778,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize" \
+    "http://localhost:8000/oauth/authorize" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize"
+    "http://localhost:8000/oauth/authorize"
 );
 
 let headers = {
@@ -819,11 +819,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize" \
+    "http://localhost:8000/oauth/authorize" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize"
+    "http://localhost:8000/oauth/authorize"
 );
 
 let headers = {
@@ -860,11 +860,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/token" \
+    "http://localhost:8000/oauth/token" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/token"
+    "http://localhost:8000/oauth/token"
 );
 
 let headers = {
@@ -901,11 +901,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens" \
+    -G "http://localhost:8000/oauth/tokens" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens"
+    "http://localhost:8000/oauth/tokens"
 );
 
 let headers = {
@@ -1380,11 +1380,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/ratione" \
+    "http://localhost:8000/oauth/tokens/in" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/ratione"
+    "http://localhost:8000/oauth/tokens/in"
 );
 
 let headers = {
@@ -1427,11 +1427,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/token/refresh" \
+    "http://localhost:8000/oauth/token/refresh" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/token/refresh"
+    "http://localhost:8000/oauth/token/refresh"
 );
 
 let headers = {
@@ -1468,11 +1468,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients" \
+    -G "http://localhost:8000/oauth/clients" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients"
+    "http://localhost:8000/oauth/clients"
 );
 
 let headers = {
@@ -1947,11 +1947,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients" \
+    "http://localhost:8000/oauth/clients" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients"
+    "http://localhost:8000/oauth/clients"
 );
 
 let headers = {
@@ -1988,11 +1988,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/maiores" \
+    "http://localhost:8000/oauth/clients/tempore" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/maiores"
+    "http://localhost:8000/oauth/clients/tempore"
 );
 
 let headers = {
@@ -2035,11 +2035,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/eum" \
+    "http://localhost:8000/oauth/clients/quis" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/eum"
+    "http://localhost:8000/oauth/clients/quis"
 );
 
 let headers = {
@@ -2082,11 +2082,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/scopes" \
+    -G "http://localhost:8000/oauth/scopes" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/scopes"
+    "http://localhost:8000/oauth/scopes"
 );
 
 let headers = {
@@ -2561,11 +2561,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens" \
+    -G "http://localhost:8000/oauth/personal-access-tokens" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens"
+    "http://localhost:8000/oauth/personal-access-tokens"
 );
 
 let headers = {
@@ -3040,11 +3040,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens" \
+    "http://localhost:8000/oauth/personal-access-tokens" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens"
+    "http://localhost:8000/oauth/personal-access-tokens"
 );
 
 let headers = {
@@ -3081,11 +3081,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/id" \
+    "http://localhost:8000/oauth/personal-access-tokens/deleniti" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/id"
+    "http://localhost:8000/oauth/personal-access-tokens/deleniti"
 );
 
 let headers = {
@@ -3128,11 +3128,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/" \
+    -G "http://localhost:8000/" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/"
+    "http://localhost:8000/"
 );
 
 let headers = {
@@ -3287,6 +3287,126 @@ fetch(url, {
 <small class="badge badge-green">GET</small>
  <b><code>/</code></b>
 </p>
+</form><h1>Products</h1>
+<h2>Create</h2>
+<p>Store a newly created product.</p>
+<p><small class="badge badge-darkred">requires authentication</small></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost:8000/api/products" \
+    -H "Content-Type: multipart/form-data" \
+    -H "Accept: application/json" \
+    -F "name=incidunt" \
+    -F "description=rerum" \
+    -F "price=4" \
+    -F "number_of_stock=6" \
+    -F "store_id=16" \
+    -F "delivery_fee=5" \
+    -F "image=@/tmp/phpZMZzBU" </code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/products"
+);
+
+let headers = {
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('name', 'incidunt');
+body.append('description', 'rerum');
+body.append('price', '4');
+body.append('number_of_stock', '6');
+body.append('store_id', '16');
+body.append('delivery_fee', '5');
+body.append('image', document.querySelector('input[name="image"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": true,
+    "message": "Product created successfully",
+    "data": {
+        "name": "Perfume",
+        "description": "This is a nice perfume for your body",
+        "price": "4000",
+        "number_of_stock": "80",
+        "store_id": "1",
+        "user_id": 4,
+        "delivery_fee": "800",
+        "public_reference_id": "5ffc36bdd1b0f",
+        "updated_at": "2021-01-11T11:30:05.000000Z",
+        "created_at": "2021-01-11T11:30:05.000000Z",
+        "id": 1
+    }
+}</code></pre>
+<div id="execution-results-POSTapi-products" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-products"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-products"></code></pre>
+</div>
+<div id="execution-error-POSTapi-products" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-products"></code></pre>
+</div>
+<form id="form-POSTapi-products" data-method="POST" data-path="api/products" data-authed="1" data-hasfiles="1" data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-products', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-products" onclick="tryItOut('POSTapi-products');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-products" onclick="cancelTryOut('POSTapi-products');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-products" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/products</code></b>
+</p>
+<p>
+<label id="auth-POSTapi-products" hidden>Authorization header: <b><code>Bearer </code></b><input type="text" name="Authorization" data-prefix="Bearer " data-endpoint="POSTapi-products" data-component="header"></label>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="POSTapi-products" data-component="body" required  hidden>
+<br>
+The name of the product</p>
+<p>
+<b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="description" data-endpoint="POSTapi-products" data-component="body" required  hidden>
+<br>
+The description of the product</p>
+<p>
+<b><code>price</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="price" data-endpoint="POSTapi-products" data-component="body" required  hidden>
+<br>
+The price of the product</p>
+<p>
+<b><code>number_of_stock</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="number_of_stock" data-endpoint="POSTapi-products" data-component="body" required  hidden>
+<br>
+The number of available products</p>
+<p>
+<b><code>store_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="store_id" data-endpoint="POSTapi-products" data-component="body" required  hidden>
+<br>
+The id of the store you want to create product for</p>
+<p>
+<b><code>delivery_fee</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+<input type="number" name="delivery_fee" data-endpoint="POSTapi-products" data-component="body" required  hidden>
+<br>
+The delivery fee of the product</p>
+<p>
+<b><code>image</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
+<input type="file" name="image" data-endpoint="POSTapi-products" data-component="body" required  hidden>
+<br>
+The image(s) of the product, it accepts an array of images (image MIMETYPE, FILEPATH, etc)</p>
+
 </form><h1>User dashboard</h1>
 <h2>Get User details</h2>
 <p>Get all details about a user - seller</p>
@@ -3295,11 +3415,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/user" \
+    -G "http://localhost:8000/api/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/user"
+    "http://localhost:8000/api/user"
 );
 
 let headers = {

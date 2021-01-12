@@ -5,7 +5,7 @@ info:
     version: 1.0.0
 servers:
     -
-        url: 'https://jumga-flutterwave-solution-api.herokuapp.com'
+        url: 'http://localhost:8000'
 paths:
     /api/auth/register:
         post:
@@ -53,59 +53,59 @@ paths:
                                 name:
                                     type: string
                                     description: 'The fullname of the user'
-                                    example: sit
+                                    example: rerum
                                 email:
                                     type: email
                                     description: 'The email of the user'
-                                    example: sit
+                                    example: officiis
                                 password:
                                     type: password
                                     description: 'The password of the user account'
-                                    example: iste
+                                    example: sequi
                                 phone_number:
                                     type: numeric
                                     description: 'The phone number of the user'
-                                    example: harum
+                                    example: sunt
                                 role:
                                     type: string
                                     description: 'The role of the user either seller or rider'
-                                    example: harum
+                                    example: sed
                                 account_number:
                                     type: The
                                     description: 'account number of the user'
-                                    example: qui
+                                    example: vero
                                 account_name:
                                     type: string
                                     description: 'The bank account name of the user'
-                                    example: voluptates
+                                    example: aut
                                 account_bank_code:
                                     type: integer
                                     description: 'The bank code of the user preferred bank'
-                                    example: 16
+                                    example: 15
                                 country:
                                     type: string
                                     description: 'The country of residence of the user'
-                                    example: nemo
+                                    example: nisi
                                 image:
                                     type: filepath
                                     description: 'The cover image for the store'
-                                    example: dolores
+                                    example: eum
                                 transaction_id:
                                     type: integer
                                     description: 'This is the transaction_id of the payment evidence (you can get this during the payment callback - `data.id`)'
-                                    example: 15
+                                    example: 6
                                 location:
                                     type: string
                                     description: 'The location of the store'
-                                    example: eos
+                                    example: sit
                                 description:
                                     type: string
                                     description: 'The description of the store'
-                                    example: ut
+                                    example: aut
                                 name_of_store:
                                     type: string
                                     description: 'The name of the store'
-                                    example: quasi
+                                    example: nulla
                             required:
                                 - name
                                 - email
@@ -167,11 +167,11 @@ paths:
                                 email:
                                     type: email
                                     description: 'The email of the user'
-                                    example: quisquam
+                                    example: praesentium
                                 password:
                                     type: password
                                     description: 'The password of the user account'
-                                    example: magni
+                                    example: alias
                             required:
                                 - email
                                 - password
@@ -353,7 +353,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: ratione
+                example: in
                 required: true
                 schema:
                     type: string
@@ -493,7 +493,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: maiores
+                example: tempore
                 required: true
                 schema:
                     type: string
@@ -629,7 +629,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: id
+                example: deleniti
                 required: true
                 schema:
                     type: string
@@ -663,6 +663,85 @@ paths:
             tags:
                 - Endpoints
             security: []
+    /api/products:
+        post:
+            summary: "Create\nStore a newly created product."
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: multipart/form-data
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: true
+                                    message: 'Product created successfully'
+                                    data: { name: Perfume, description: 'This is a nice perfume for your body', price: '4000', number_of_stock: '80', store_id: '1', user_id: 4, delivery_fee: '800', public_reference_id: 5ffc36bdd1b0f, updated_at: '2021-01-11T11:30:05.000000Z', created_at: '2021-01-11T11:30:05.000000Z', id: 1 }
+                                properties:
+                                    status: { type: boolean, example: true }
+                                    message: { type: string, example: 'Product created successfully' }
+                                    data: { type: object, example: { name: Perfume, description: 'This is a nice perfume for your body', price: '4000', number_of_stock: '80', store_id: '1', user_id: 4, delivery_fee: '800', public_reference_id: 5ffc36bdd1b0f, updated_at: '2021-01-11T11:30:05.000000Z', created_at: '2021-01-11T11:30:05.000000Z', id: 1 } }
+            tags:
+                - Products
+            requestBody:
+                required: true
+                content:
+                    multipart/form-data:
+                        schema:
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: 'The name of the product'
+                                    example: incidunt
+                                description:
+                                    type: string
+                                    description: 'The description of the product'
+                                    example: rerum
+                                price:
+                                    type: integer
+                                    description: 'The price of the product'
+                                    example: 4
+                                number_of_stock:
+                                    type: integer
+                                    description: 'The number of available products'
+                                    example: 6
+                                store_id:
+                                    type: integer
+                                    description: 'The id of the store you want to create product for'
+                                    example: 16
+                                delivery_fee:
+                                    type: integer
+                                    description: 'The delivery fee of the product'
+                                    example: 5
+                                image:
+                                    type: string
+                                    format: binary
+                                    description: 'The image(s) of the product, it accepts an array of images (image MIMETYPE, FILEPATH, etc)'
+                            required:
+                                - name
+                                - description
+                                - price
+                                - number_of_stock
+                                - store_id
+                                - delivery_fee
+                                - image
     /api/user:
         get:
             summary: "Get User details\nGet all details about a user - seller"

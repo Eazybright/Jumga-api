@@ -12,14 +12,14 @@ Get all details about a user - seller
 
 ```bash
 curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/user" \
+    -G "http://localhost:8000/api/user" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/user"
+    "http://localhost:8000/api/user"
 );
 
 let headers = {
