@@ -54,4 +54,14 @@ class ProductRepository implements ProductRepositoryInterface
   {
     return Product::with('images')->where('user_id', $user_id)->get();
   }
+
+  public function get()
+  {
+    return Product::with('images')->latest()->get();
+  }
+
+  public function get_by_id($product_id)
+  {
+    return Product::with('images')->where('id', $product_id)->first();
+  }
 }

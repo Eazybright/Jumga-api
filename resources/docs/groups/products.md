@@ -1,10 +1,9 @@
 # Products
 
 
-## Get user products
-Display a listing of all user products.
+## Get all products
+Display a listing of all products.
 
-<small class="badge badge-darkred">requires authentication</small>
 
 
 
@@ -84,7 +83,7 @@ fetch(url, {
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-GETapi-products"></code></pre>
 </div>
-<form id="form-GETapi-products" data-method="GET" data-path="api/products" data-authed="1" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-products', this);">
+<form id="form-GETapi-products" data-method="GET" data-path="api/products" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-products', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
         <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-products" onclick="tryItOut('GETapi-products');">Try it out ⚡</button>
@@ -95,8 +94,103 @@ fetch(url, {
 <small class="badge badge-green">GET</small>
  <b><code>api/products</code></b>
 </p>
+</form>
+
+
+## Get a product
+Get product details by its id
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/iure" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"
+```
+
+```javascript
+const url = new URL(
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/iure"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response => response.json());
+```
+
+
+> Example response (200):
+
+```json
+{
+    "status": true,
+    "message": "Successful",
+    "data": {
+        "id": 1,
+        "name": "eazy shoes",
+        "description": "A collection os shoes",
+        "price": "50000",
+        "number_of_stock": "80",
+        "public_reference_id": "5ffc36bdd1b0f",
+        "delivery_fee": "800",
+        "user_id": 4,
+        "store_id": 1,
+        "created_at": "2021-01-11T11:30:05.000000Z",
+        "updated_at": "2021-01-12T12:43:08.000000Z",
+        "images": [
+            {
+                "id": 1,
+                "image": "https:\/\/res.cloudinary.com\/api-seekhostel\/image\/upload\/v1610364609\/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images\/splnn0brrelkbrxdfgbb.png",
+                "product_id": 1,
+                "created_at": "2021-01-11T11:30:10.000000Z",
+                "updated_at": "2021-01-11T11:30:10.000000Z"
+            },
+            {
+                "id": 2,
+                "image": "https:\/\/res.cloudinary.com\/api-seekhostel\/image\/upload\/v1610364613\/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images\/v3mkeajh6wklfnzxkneq.png",
+                "product_id": 1,
+                "created_at": "2021-01-11T11:30:15.000000Z",
+                "updated_at": "2021-01-11T11:30:15.000000Z"
+            }
+        ]
+    }
+}
+```
+<div id="execution-results-GETapi-products--product_id-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-products--product_id-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-products--product_id-"></code></pre>
+</div>
+<div id="execution-error-GETapi-products--product_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-products--product_id-"></code></pre>
+</div>
+<form id="form-GETapi-products--product_id-" data-method="GET" data-path="api/products/{product_id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-products--product_id-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-products--product_id-" onclick="tryItOut('GETapi-products--product_id-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-products--product_id-" onclick="cancelTryOut('GETapi-products--product_id-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-products--product_id-" hidden>Send Request 💥</button>
+    </h3>
 <p>
-<label id="auth-GETapi-products" hidden>Authorization header: <b><code>Bearer </code></b><input type="text" name="Authorization" data-prefix="Bearer " data-endpoint="GETapi-products" data-component="header"></label>
+<small class="badge badge-green">GET</small>
+ <b><code>api/products/{product_id}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>product_id</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="product_id" data-endpoint="GETapi-products--product_id-" data-component="url" required  hidden>
+<br>
 </p>
 </form>
 
@@ -115,13 +209,13 @@ curl -X POST \
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/products" \
     -H "Content-Type: multipart/form-data" \
     -H "Accept: application/json" \
-    -F "name=ut" \
-    -F "description=enim" \
-    -F "price=13" \
-    -F "number_of_stock=6" \
-    -F "store_id=19" \
-    -F "delivery_fee=19" \
-    -F "image=@/tmp/phpAjoF41" 
+    -F "name=cum" \
+    -F "description=et" \
+    -F "price=6" \
+    -F "number_of_stock=2" \
+    -F "store_id=10" \
+    -F "delivery_fee=16" \
+    -F "image=@/tmp/phpLPBCkH" 
 ```
 
 ```javascript
@@ -135,12 +229,12 @@ let headers = {
 };
 
 const body = new FormData();
-body.append('name', 'ut');
-body.append('description', 'enim');
-body.append('price', '13');
-body.append('number_of_stock', '6');
-body.append('store_id', '19');
-body.append('delivery_fee', '19');
+body.append('name', 'cum');
+body.append('description', 'et');
+body.append('price', '6');
+body.append('number_of_stock', '2');
+body.append('store_id', '10');
+body.append('delivery_fee', '16');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -245,21 +339,21 @@ Update the product details.
 
 ```bash
 curl -X PUT \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/a" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/blanditiis" \
     -H "Content-Type: multipart/form-data" \
     -H "Accept: application/json" \
-    -F "name=minus" \
-    -F "description=inventore" \
-    -F "price=9" \
-    -F "number_of_stock=13" \
+    -F "name=illo" \
+    -F "description=dolor" \
+    -F "price=4" \
+    -F "number_of_stock=9" \
     -F "delivery_fee=9" \
-    -F "store_id=18" \
-    -F "image=@/tmp/php2bhGXW" 
+    -F "store_id=14" \
+    -F "image=@/tmp/phpGK229J" 
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/a"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/blanditiis"
 );
 
 let headers = {
@@ -268,12 +362,12 @@ let headers = {
 };
 
 const body = new FormData();
-body.append('name', 'minus');
-body.append('description', 'inventore');
-body.append('price', '9');
-body.append('number_of_stock', '13');
+body.append('name', 'illo');
+body.append('description', 'dolor');
+body.append('price', '4');
+body.append('number_of_stock', '9');
 body.append('delivery_fee', '9');
-body.append('store_id', '18');
+body.append('store_id', '14');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {

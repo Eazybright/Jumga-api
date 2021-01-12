@@ -53,59 +53,59 @@ paths:
                                 name:
                                     type: string
                                     description: 'The fullname of the user'
-                                    example: dolorum
+                                    example: molestiae
                                 email:
                                     type: email
                                     description: 'The email of the user'
-                                    example: autem
+                                    example: et
                                 password:
                                     type: password
                                     description: 'The password of the user account'
-                                    example: explicabo
+                                    example: consequatur
                                 phone_number:
                                     type: numeric
                                     description: 'The phone number of the user'
-                                    example: laboriosam
+                                    example: sunt
                                 role:
                                     type: string
                                     description: 'The role of the user either seller or rider'
-                                    example: sint
+                                    example: ipsam
                                 account_number:
                                     type: The
                                     description: 'account number of the user'
-                                    example: corrupti
+                                    example: ut
                                 account_name:
                                     type: string
                                     description: 'The bank account name of the user'
-                                    example: nulla
+                                    example: quae
                                 account_bank_code:
                                     type: integer
                                     description: 'The bank code of the user preferred bank'
-                                    example: 20
+                                    example: 2
                                 country:
                                     type: string
                                     description: 'The country of residence of the user'
-                                    example: qui
+                                    example: reprehenderit
                                 image:
                                     type: filepath
                                     description: 'The cover image for the store'
-                                    example: illum
+                                    example: omnis
                                 transaction_id:
                                     type: integer
                                     description: 'This is the transaction_id of the payment evidence (you can get this during the payment callback - `data.id`)'
-                                    example: 19
+                                    example: 14
                                 location:
                                     type: string
                                     description: 'The location of the store'
-                                    example: ab
+                                    example: quidem
                                 description:
                                     type: string
                                     description: 'The description of the store'
-                                    example: nostrum
+                                    example: nesciunt
                                 name_of_store:
                                     type: string
                                     description: 'The name of the store'
-                                    example: reiciendis
+                                    example: porro
                             required:
                                 - name
                                 - email
@@ -167,11 +167,11 @@ paths:
                                 email:
                                     type: email
                                     description: 'The email of the user'
-                                    example: amet
+                                    example: voluptatem
                                 password:
                                     type: password
                                     description: 'The password of the user account'
-                                    example: eius
+                                    example: sunt
                             required:
                                 - email
                                 - password
@@ -353,7 +353,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: porro
+                example: consequatur
                 required: true
                 schema:
                     type: string
@@ -493,7 +493,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: vero
+                example: qui
                 required: true
                 schema:
                     type: string
@@ -629,7 +629,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: laborum
+                example: soluta
                 required: true
                 schema:
                     type: string
@@ -665,7 +665,7 @@ paths:
             security: []
     /api/products:
         get:
-            summary: "Get user products\nDisplay a listing of all user products."
+            summary: "Get all products\nDisplay a listing of all products."
             description: ''
             parameters:
                 -
@@ -692,6 +692,7 @@ paths:
                                 example: "{\n    \"status\": true,\n    \"message\": \"Successful\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"eazy shoes\",\n            \"description\": \"A collection os shoes\",\n            \"price\": \"50000\",\n            \"number_of_stock\": \"80\",\n            \"public_reference_id\": \"5ffc36bdd1b0f\",\n            \"delivery_fee\": \"800\",\n            \"user_id\": 4,\n            \"store_id\": 1,\n            \"created_at\": \"2021-01-11T11:30:05.000000Z\",\n            \"updated_at\": \"2021-01-12T12:43:08.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 1,\n                    \"image\": \"https://res.cloudinary.com/api-seekhostel/image/upload/v1610364609/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/splnn0brrelkbrxdfgbb.png\",\n                    \"product_id\": 1,\n                    \"created_at\": \"2021-01-11T11:30:10.000000Z\",\n                    \"updated_at\": \"2021-01-11T11:30:10.000000Z\"\n                },\n                {\n                    \"id\": 2,\n                    \"image\": \"https://res.cloudinary.com/api-seekhostel/image/upload/v1610364613/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/v3mkeajh6wklfnzxkneq.png\",\n                    \"product_id\": 1,\n                    \"created_at\": \"2021-01-11T11:30:15.000000Z\",\n                    \"updated_at\": \"2021-01-11T11:30:15.000000Z\"\n                }\n            ]\n        }\n    ]\n}\n}"
             tags:
                 - Products
+            security: []
         post:
             summary: "Create\nStore a newly created product."
             description: ''
@@ -737,27 +738,27 @@ paths:
                                 name:
                                     type: string
                                     description: 'The name of the product'
-                                    example: ut
+                                    example: cum
                                 description:
                                     type: string
                                     description: 'The description of the product'
-                                    example: enim
+                                    example: et
                                 price:
                                     type: integer
                                     description: 'The price of the product'
-                                    example: 13
+                                    example: 6
                                 number_of_stock:
                                     type: integer
                                     description: 'The number of available products'
-                                    example: 6
+                                    example: 2
                                 store_id:
                                     type: integer
                                     description: 'The id of the store you want to create product for'
-                                    example: 19
+                                    example: 10
                                 delivery_fee:
                                     type: integer
                                     description: 'The delivery fee of the product'
-                                    example: 19
+                                    example: 16
                                 image:
                                     type: string
                                     format: binary
@@ -771,6 +772,42 @@ paths:
                                 - delivery_fee
                                 - image
     '/api/products/{product_id}':
+        get:
+            summary: "Get a product\nGet product details by its id"
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: true
+                                    message: Successful
+                                    data: { id: 1, name: 'eazy shoes', description: 'A collection os shoes', price: '50000', number_of_stock: '80', public_reference_id: 5ffc36bdd1b0f, delivery_fee: '800', user_id: 4, store_id: 1, created_at: '2021-01-11T11:30:05.000000Z', updated_at: '2021-01-12T12:43:08.000000Z', images: [{ id: 1, image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1610364609/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/splnn0brrelkbrxdfgbb.png', product_id: 1, created_at: '2021-01-11T11:30:10.000000Z', updated_at: '2021-01-11T11:30:10.000000Z' }, { id: 2, image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1610364613/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/v3mkeajh6wklfnzxkneq.png', product_id: 1, created_at: '2021-01-11T11:30:15.000000Z', updated_at: '2021-01-11T11:30:15.000000Z' }] }
+                                properties:
+                                    status: { type: boolean, example: true }
+                                    message: { type: string, example: Successful }
+                                    data: { type: object, example: { id: 1, name: 'eazy shoes', description: 'A collection os shoes', price: '50000', number_of_stock: '80', public_reference_id: 5ffc36bdd1b0f, delivery_fee: '800', user_id: 4, store_id: 1, created_at: '2021-01-11T11:30:05.000000Z', updated_at: '2021-01-12T12:43:08.000000Z', images: [{ id: 1, image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1610364609/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/splnn0brrelkbrxdfgbb.png', product_id: 1, created_at: '2021-01-11T11:30:10.000000Z', updated_at: '2021-01-11T11:30:10.000000Z' }, { id: 2, image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1610364613/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/v3mkeajh6wklfnzxkneq.png', product_id: 1, created_at: '2021-01-11T11:30:15.000000Z', updated_at: '2021-01-11T11:30:15.000000Z' }] } }
+            tags:
+                - Products
+            security: []
         put:
             summary: "Update\nUpdate the product details."
             description: ''
@@ -816,19 +853,19 @@ paths:
                                 name:
                                     type: string
                                     description: 'The name of the product'
-                                    example: minus
+                                    example: illo
                                 description:
                                     type: string
                                     description: 'The description of the product'
-                                    example: inventore
+                                    example: dolor
                                 price:
                                     type: integer
                                     description: 'The price of the product'
-                                    example: 9
+                                    example: 4
                                 number_of_stock:
                                     type: integer
                                     description: 'The number of available products'
-                                    example: 13
+                                    example: 9
                                 delivery_fee:
                                     type: integer
                                     description: 'The delivery fee of the product'
@@ -840,7 +877,7 @@ paths:
                                 store_id:
                                     type: integer
                                     description: 'The id of the store you want to create product for'
-                                    example: 18
+                                    example: 14
                             required:
                                 - name
                                 - description
@@ -854,7 +891,90 @@ paths:
                 in: path
                 name: product_id
                 description: ''
-                example: a
+                example: iure
+                required: true
+                schema:
+                    type: string
+    /api/stores:
+        get:
+            summary: "Get all stores\nDisplay a listing of all stores."
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: true
+                                    message: Successful
+                                    data: [{ id: 2, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609959281/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/nplltsxgtqjsoh2z92sc.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 5, dispatch_rider_id: 2, created_at: '2021-01-06T18:54:42.000000Z', updated_at: '2021-01-06T18:54:42.000000Z' }, { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z' }]
+                                properties:
+                                    status: { type: boolean, example: true }
+                                    message: { type: string, example: Successful }
+                                    data: { type: array, example: [{ id: 2, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609959281/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/nplltsxgtqjsoh2z92sc.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 5, dispatch_rider_id: 2, created_at: '2021-01-06T18:54:42.000000Z', updated_at: '2021-01-06T18:54:42.000000Z' }, { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z' }], items: { type: object } }
+            tags:
+                - Stores
+            security: []
+    '/api/stores/{store_id}':
+        get:
+            summary: "Get a store\nGet store details by its id"
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    status: true
+                                    message: Successful
+                                    data: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z' }
+                                properties:
+                                    status: { type: boolean, example: true }
+                                    message: { type: string, example: Successful }
+                                    data: { type: object, example: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z' } }
+            tags:
+                - Stores
+            security: []
+        parameters:
+            -
+                in: path
+                name: store_id
+                description: ''
+                example: fuga
                 required: true
                 schema:
                     type: string
@@ -887,10 +1007,10 @@ paths:
                                 example:
                                     status: true
                                     message: Successful
-                                    data: { id: 4, name: 'kolawole Ezekiel', email: doneazy911@gmail.com, role: seller, phone_number: '08135306027', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T18:46:33.000000Z', created_at: '2021-01-06T18:46:33.000000Z', updated_at: '2021-01-06T18:46:46.000000Z', store: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z', rider: { id: 2, name: 'Dispatch Rider 2', email: doneazy2@gmail.com, role: rider, phone_number: '08135306035', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T17:55:31.000000Z', created_at: '2021-01-06T17:55:31.000000Z', updated_at: '2021-01-06T17:55:31.000000Z' } } }
+                                    data: { id: 4, name: 'kolawole Ezekiel', email: doneazy911@gmail.com, role: seller, phone_number: '08135306027', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T18:46:33.000000Z', created_at: '2021-01-06T18:46:33.000000Z', updated_at: '2021-01-06T18:46:46.000000Z', store: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z', rider: { id: 2, name: 'Dispatch Rider 2', email: doneazy2@gmail.com, role: rider, phone_number: '08135306035', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T17:55:31.000000Z', created_at: '2021-01-06T17:55:31.000000Z', updated_at: '2021-01-06T17:55:31.000000Z' } }, product: [{ id: 1, name: 'eazy shoes', description: 'A collection os shoes', price: '50000', number_of_stock: '80', public_reference_id: 5ffc36bdd1b0f, delivery_fee: '800', user_id: 4, store_id: 1, created_at: '2021-01-11T11:30:05.000000Z', updated_at: '2021-01-12T12:43:08.000000Z', images: [{ id: 1, image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1610364609/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/splnn0brrelkbrxdfgbb.png', product_id: 1, created_at: '2021-01-11T11:30:10.000000Z', updated_at: '2021-01-11T11:30:10.000000Z' }, { id: 2, image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1610364613/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/v3mkeajh6wklfnzxkneq.png', product_id: 1, created_at: '2021-01-11T11:30:15.000000Z', updated_at: '2021-01-11T11:30:15.000000Z' }] }] }
                                 properties:
                                     status: { type: boolean, example: true }
                                     message: { type: string, example: Successful }
-                                    data: { type: object, example: { id: 4, name: 'kolawole Ezekiel', email: doneazy911@gmail.com, role: seller, phone_number: '08135306027', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T18:46:33.000000Z', created_at: '2021-01-06T18:46:33.000000Z', updated_at: '2021-01-06T18:46:46.000000Z', store: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z', rider: { id: 2, name: 'Dispatch Rider 2', email: doneazy2@gmail.com, role: rider, phone_number: '08135306035', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T17:55:31.000000Z', created_at: '2021-01-06T17:55:31.000000Z', updated_at: '2021-01-06T17:55:31.000000Z' } } } }
+                                    data: { type: object, example: { id: 4, name: 'kolawole Ezekiel', email: doneazy911@gmail.com, role: seller, phone_number: '08135306027', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T18:46:33.000000Z', created_at: '2021-01-06T18:46:33.000000Z', updated_at: '2021-01-06T18:46:46.000000Z', store: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z', rider: { id: 2, name: 'Dispatch Rider 2', email: doneazy2@gmail.com, role: rider, phone_number: '08135306035', account_number: '0228415513', account_name: 'Kolawole Ezekiel Damilare', account_bank_code: '058', country: Nigeria, flutterwave_subaccount_id: RS_BBA8FFC88A3kfjkfjBC383C, email_verified_at: '2021-01-06T17:55:31.000000Z', created_at: '2021-01-06T17:55:31.000000Z', updated_at: '2021-01-06T17:55:31.000000Z' } }, product: [{ id: 1, name: 'eazy shoes', description: 'A collection os shoes', price: '50000', number_of_stock: '80', public_reference_id: 5ffc36bdd1b0f, delivery_fee: '800', user_id: 4, store_id: 1, created_at: '2021-01-11T11:30:05.000000Z', updated_at: '2021-01-12T12:43:08.000000Z', images: [{ id: 1, image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1610364609/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/splnn0brrelkbrxdfgbb.png', product_id: 1, created_at: '2021-01-11T11:30:10.000000Z', updated_at: '2021-01-11T11:30:10.000000Z' }, { id: 2, image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1610364613/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/v3mkeajh6wklfnzxkneq.png', product_id: 1, created_at: '2021-01-11T11:30:15.000000Z', updated_at: '2021-01-11T11:30:15.000000Z' }] }] } }
             tags:
                 - 'User dashboard'

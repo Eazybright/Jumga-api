@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 use App\Traits\ApiResponseMessage;
 use App\Services\ProductService;
@@ -24,9 +24,8 @@ class ProductsController extends Controller
   }
 
   /**
-   * Get user products
-   * Display a listing of all user products.
-   * @authenticated
+   * Get all products
+   * Display a listing of all products.
    * @response {
    *     "status": true,
    *     "message": "Successful",
@@ -66,13 +65,11 @@ class ProductsController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index(Request $request)
+  public function index()
   {
-    $user_id = $request->user()->id;
     try {
-      $user_id = $request->user()->id;
 
-      $data = $this->productService->get_product_by_user_id($user_id);
+      $data = $this->productService->get_all_products();
 
       if(isset($data['status']) && $data['status'] == false ){
         return $this->ErrorResponse("An error, please try again", 
@@ -174,6 +171,59 @@ class ProductsController extends Controller
       }
 
       return $this->SuccessResponse($data, "Product updated successfully", 201);
+    }catch(\Exception $e) {
+      return $this->ExceptionResponse($e);
+    }
+  }
+
+  /**
+   * Get a product
+   * Get product details by its id
+   * @response {
+   *     "status": true,
+   *     "message": "Successful",
+   *     "data": {
+   *         "id": 1,
+   *         "name": "eazy shoes",
+   *         "description": "A collection os shoes",
+   *         "price": "50000",
+   *         "number_of_stock": "80",
+   *         "public_reference_id": "5ffc36bdd1b0f",
+   *         "delivery_fee": "800",
+   *         "user_id": 4,
+   *         "store_id": 1,
+   *         "created_at": "2021-01-11T11:30:05.000000Z",
+   *         "updated_at": "2021-01-12T12:43:08.000000Z",
+   *         "images": [
+   *             {
+   *                 "id": 1,
+   *                 "image": "https://res.cloudinary.com/api-seekhostel/image/upload/v1610364609/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/splnn0brrelkbrxdfgbb.png",
+   *                 "product_id": 1,
+   *                 "created_at": "2021-01-11T11:30:10.000000Z",
+   *                 "updated_at": "2021-01-11T11:30:10.000000Z"
+   *             },
+   *             {
+   *                 "id": 2,
+   *                 "image": "https://res.cloudinary.com/api-seekhostel/image/upload/v1610364613/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/v3mkeajh6wklfnzxkneq.png",
+   *                 "product_id": 1,
+   *                 "created_at": "2021-01-11T11:30:15.000000Z",
+   *                 "updated_at": "2021-01-11T11:30:15.000000Z"
+   *             }
+   *         ]
+   *     }
+   * }
+   */
+  public function get_by_id(int $product_id)
+  {
+    try {
+      $data = $this->productService->get_by_id($product_id);
+
+      if(isset($data['status']) && $data['status'] == false ){
+        return $this->ErrorResponse("An error, please try again", 
+                $data['message'], 400);
+      }
+
+      return $this->SuccessResponse($data, "Successful", 201);
     }catch(\Exception $e) {
       return $this->ExceptionResponse($e);
     }

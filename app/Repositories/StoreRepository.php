@@ -23,4 +23,14 @@ class StoreRepository implements StoreRepositoryInterface
   {
     return Store::where('id', $store_id)->exists();
   }
+
+  public function get()
+  {
+    return Store::latest()->get();
+  }
+
+  public function get_by_id($store_id)
+  {
+    return Store::where('id', $store_id)->first();
+  }
 }

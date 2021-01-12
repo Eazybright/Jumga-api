@@ -1158,14 +1158,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/porro" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/consequatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/porro"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/consequatur"
 );
 
 let headers = {
@@ -1819,14 +1819,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/vero" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/vero"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/qui"
 );
 
 let headers = {
@@ -1879,14 +1879,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/alias" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/voluptate" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/alias"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/voluptate"
 );
 
 let headers = {
@@ -2979,14 +2979,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/laborum" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/soluta" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/laborum"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/soluta"
 );
 
 let headers = {
