@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth:api'], function(){
   Route::group(['prefix' => 'products'], function(){
       // Route::get('/', 'HostelController@index');
     Route::post('/', 'ProductsController@store');
-      // Route::put('/{hostel_id}', 'HostelController@update');
+    Route::put('/{product_id}', 'ProductsController@update');
       // Route::get('/:id', 'HostelController@getHostel');
       // Route::delete('/:id', 'HostelController@delete');
   });

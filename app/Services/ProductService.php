@@ -62,6 +62,49 @@ class ProductService
     }
   }
 
+  public function update_product($params, $user_id, $product_id)
+  {
+    DB::beginTransaction();
+    try{
+      //check if image request exist and it is an array
+      if(isset($params['image']) && !is_array($params['image'])){
+        DB::rollBack();
+        return $this->error_message('Image content is not an array');
+      }
+
+      //check if product_id exists
+      $checkStoreID = $this->productRepository->checkIfIdExists($product_id);
+      if(!$checkStoreID){
+        DB::rollBack();
+        return $this->error_message('Store does not exist');
+      }
+
+      // update product
+      $update_product = $this->productRepository->update($params, $user_id, $product_id);
+      if(!$update_product){
+        DB::rollBack();
+        return $this->error_message('Product not updated');
+      }
+
+      // save product image if it exist
+      if(isset($params['image'])){
+        foreach ($params['image'] as $image) {
+          $save_image = $this->productImagesRepository->save($image, $update_product->id);
+          if(!$save_image){
+            DB::rollBack();
+            return $this->error_message('Product Image failed to upload');
+          }
+        }
+      }
+     
+      DB::commit();
+      return $update_product;
+    }catch(\Exception $e){
+      DB::rollBack();
+      throw $e;
+    }
+  }
+
   protected function error_message($message)
   {
     return  array(

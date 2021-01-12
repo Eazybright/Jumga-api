@@ -7,6 +7,7 @@ use App\Http\Requests\ProductRequest;
 use App\Traits\ApiResponseMessage;
 use App\Services\ProductService;
 use App\Http\Requests\UpdateProductRequest;
+use App\Http\Response;
 
 /**
  * @group Products
@@ -85,9 +86,22 @@ class ProductsController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function update(UpdateProductRequest $request, $id)
+  public function update(UpdateProductRequest $request, $product_id)
   {
-      //
+    try {
+      $user_id = $request->user()->id;
+
+      $data = $this->productService->update_product($request->all(), $user_id, $product_id);
+
+      if(isset($data['status']) && $data['status'] == false ){
+        return $this->ErrorResponse("Unable to update product, please try again", 
+                $data['message'], 400);
+      }
+
+      return $this->SuccessResponse($data, "Product updated successfully", 201);
+    }catch(\Exception $e) {
+      return $this->ExceptionResponse($e);
+    }
   }
 
   /**

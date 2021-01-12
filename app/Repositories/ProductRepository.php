@@ -21,4 +21,32 @@ class ProductRepository implements ProductRepositoryInterface
     $product->save();
     return $product;
   }
+
+  public function checkIfIdExists($product_id)
+  {
+    return Product::where('id', $product_id)->exists();
+  }
+
+  public function update($params, $user_id, $product_id)
+  {
+    $product = Product::find($product_id);
+    if(isset($params['name'])){
+      $product->name = $params['name'];
+    }
+    if(isset($params['description'])){
+      $product->description = $params['description'];
+    }
+    if(isset($params['price'])){
+      $product->price = $params['price'];
+    }
+    if(isset($params['number_of_stock'])){
+      $product->number_of_stock = $params['number_of_stock'];
+    }
+    if(isset($params['delivery_fee'])){
+      $product->delivery_fee = $params['delivery_fee'];
+    }
+    $product->user_id = $user_id;
+    $product->save();
+    return $product;
+  }
 }
