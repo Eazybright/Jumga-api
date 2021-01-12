@@ -11,16 +11,16 @@ Seller signs up on our platform
 
 ```bash
 curl -X POST \
-    "http://localhost:8000/api/auth/register" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"rerum","email":"officiis","password":"sequi","phone_number":"sunt","role":"sed","account_number":"vero","account_name":"aut","account_bank_code":15,"country":"nisi","image":"eum","transaction_id":6,"location":"sit","description":"aut","name_of_store":"nulla"}'
+    -d '{"name":"dolorum","email":"autem","password":"explicabo","phone_number":"laboriosam","role":"sint","account_number":"corrupti","account_name":"nulla","account_bank_code":20,"country":"qui","image":"illum","transaction_id":19,"location":"ab","description":"nostrum","name_of_store":"reiciendis"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/api/auth/register"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/register"
 );
 
 let headers = {
@@ -29,20 +29,20 @@ let headers = {
 };
 
 let body = {
-    "name": "rerum",
-    "email": "officiis",
-    "password": "sequi",
-    "phone_number": "sunt",
-    "role": "sed",
-    "account_number": "vero",
-    "account_name": "aut",
-    "account_bank_code": 15,
-    "country": "nisi",
-    "image": "eum",
-    "transaction_id": 6,
-    "location": "sit",
-    "description": "aut",
-    "name_of_store": "nulla"
+    "name": "dolorum",
+    "email": "autem",
+    "password": "explicabo",
+    "phone_number": "laboriosam",
+    "role": "sint",
+    "account_number": "corrupti",
+    "account_name": "nulla",
+    "account_bank_code": 20,
+    "country": "qui",
+    "image": "illum",
+    "transaction_id": 19,
+    "location": "ab",
+    "description": "nostrum",
+    "name_of_store": "reiciendis"
 }
 
 fetch(url, {
@@ -166,16 +166,16 @@ User login into their account
 
 ```bash
 curl -X POST \
-    "http://localhost:8000/api/auth/login" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"praesentium","password":"alias"}'
+    -d '{"email":"amet","password":"eius"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/api/auth/login"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/login"
 );
 
 let headers = {
@@ -184,8 +184,8 @@ let headers = {
 };
 
 let body = {
-    "email": "praesentium",
-    "password": "alias"
+    "email": "amet",
+    "password": "eius"
 }
 
 fetch(url, {

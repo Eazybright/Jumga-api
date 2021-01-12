@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "localhost"
+            "value": "jumga-flutterwave-solution-api.herokuapp.com"
         }
     ],
     "info": {
         "name": "JUMGA FOR FLUTTERWAVE API",
-        "_postman_id": "ab15bece-17ef-4d9f-946c-06354c76e1fb",
+        "_postman_id": "114b6ed2-2308-4a8d-8de1-2c41a20589e8",
         "description": "This is the api docs for backend implementation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -23,11 +23,11 @@
                     "name": "Register\nSeller signs up on our platform",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "api\/auth\/register",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/auth\/register"
+                            "raw": "https:\/\/{{baseUrl}}\/api\/auth\/register"
                         },
                         "method": "POST",
                         "header": [
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"rerum\",\n    \"email\": \"officiis\",\n    \"password\": \"sequi\",\n    \"phone_number\": \"sunt\",\n    \"role\": \"sed\",\n    \"account_number\": \"vero\",\n    \"account_name\": \"aut\",\n    \"account_bank_code\": 15,\n    \"country\": \"nisi\",\n    \"image\": \"eum\",\n    \"transaction_id\": 6,\n    \"location\": \"sit\",\n    \"description\": \"aut\",\n    \"name_of_store\": \"nulla\"\n}"
+                            "raw": "{\n    \"name\": \"dolorum\",\n    \"email\": \"autem\",\n    \"password\": \"explicabo\",\n    \"phone_number\": \"laboriosam\",\n    \"role\": \"sint\",\n    \"account_number\": \"corrupti\",\n    \"account_name\": \"nulla\",\n    \"account_bank_code\": 20,\n    \"country\": \"qui\",\n    \"image\": \"illum\",\n    \"transaction_id\": 19,\n    \"location\": \"ab\",\n    \"description\": \"nostrum\",\n    \"name_of_store\": \"reiciendis\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -55,11 +55,11 @@
                     "name": "Login\nUser login into their account",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "api\/auth\/login",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/auth\/login"
+                            "raw": "https:\/\/{{baseUrl}}\/api\/auth\/login"
                         },
                         "method": "POST",
                         "header": [
@@ -74,7 +74,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"praesentium\",\n    \"password\": \"alias\"\n}"
+                            "raw": "{\n    \"email\": \"amet\",\n    \"password\": \"eius\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -93,11 +93,11 @@
                     "name": "Authorize a client to access the user's account.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/authorize",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/authorize"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/authorize"
                         },
                         "method": "GET",
                         "header": [
@@ -122,11 +122,11 @@
                     "name": "Approve the authorization request.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/authorize",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/authorize"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/authorize"
                         },
                         "method": "POST",
                         "header": [
@@ -151,11 +151,11 @@
                     "name": "Deny the authorization request.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/authorize",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/authorize"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/authorize"
                         },
                         "method": "DELETE",
                         "header": [
@@ -180,11 +180,11 @@
                     "name": "Authorize a client to access the user's account.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/token",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/token"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/token"
                         },
                         "method": "POST",
                         "header": [
@@ -209,11 +209,11 @@
                     "name": "Get all of the authorized tokens for the authenticated user.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/tokens",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/tokens"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/tokens"
                         },
                         "method": "GET",
                         "header": [
@@ -238,16 +238,16 @@
                     "name": "Delete the given token.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/tokens\/:token_id",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/tokens\/:token_id",
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/tokens\/:token_id",
                             "variable": [
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "in",
+                                    "value": "porro",
                                     "description": ""
                                 }
                             ]
@@ -275,11 +275,11 @@
                     "name": "Get a fresh transient token cookie for the authenticated user.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/token\/refresh",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/token\/refresh"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/token\/refresh"
                         },
                         "method": "POST",
                         "header": [
@@ -304,11 +304,11 @@
                     "name": "Get all of the clients for the authenticated user.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/clients",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/clients"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/clients"
                         },
                         "method": "GET",
                         "header": [
@@ -333,11 +333,11 @@
                     "name": "Store a new client.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/clients",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/clients"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/clients"
                         },
                         "method": "POST",
                         "header": [
@@ -362,16 +362,16 @@
                     "name": "Update the given client.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/clients\/:client_id",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/clients\/:client_id",
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/clients\/:client_id",
                             "variable": [
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "tempore",
+                                    "value": "vero",
                                     "description": ""
                                 }
                             ]
@@ -399,16 +399,16 @@
                     "name": "Delete the given client.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/clients\/:client_id",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/clients\/:client_id",
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/clients\/:client_id",
                             "variable": [
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "quis",
+                                    "value": "alias",
                                     "description": ""
                                 }
                             ]
@@ -436,11 +436,11 @@
                     "name": "Get all of the available scopes for the application.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/scopes",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/scopes"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/scopes"
                         },
                         "method": "GET",
                         "header": [
@@ -465,11 +465,11 @@
                     "name": "Get all of the personal access tokens for the authenticated user.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/personal-access-tokens",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/personal-access-tokens"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/personal-access-tokens"
                         },
                         "method": "GET",
                         "header": [
@@ -494,11 +494,11 @@
                     "name": "Create a new personal access token for the user.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/personal-access-tokens",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/personal-access-tokens"
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/personal-access-tokens"
                         },
                         "method": "POST",
                         "header": [
@@ -523,16 +523,16 @@
                     "name": "Delete the given token.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "oauth\/personal-access-tokens\/:token_id",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/oauth\/personal-access-tokens\/:token_id",
+                            "raw": "https:\/\/{{baseUrl}}\/oauth\/personal-access-tokens\/:token_id",
                             "variable": [
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "deleniti",
+                                    "value": "laborum",
                                     "description": ""
                                 }
                             ]
@@ -560,11 +560,11 @@
                     "name": "\/",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "\/",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/\/"
+                            "raw": "https:\/\/{{baseUrl}}\/\/"
                         },
                         "method": "GET",
                         "header": [
@@ -592,14 +592,40 @@
             "description": "",
             "item": [
                 {
-                    "name": "Create\nStore a newly created product.",
+                    "name": "Get user products\nDisplay a listing of all user products.",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "api\/products",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/products"
+                            "raw": "https:\/\/{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create\nStore a newly created product.",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/products"
                         },
                         "method": "POST",
                         "header": [
@@ -617,17 +643,17 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "incidunt",
+                                    "value": "ut",
                                     "type": "text"
                                 },
                                 {
                                     "key": "description",
-                                    "value": "rerum",
+                                    "value": "enim",
                                     "type": "text"
                                 },
                                 {
                                     "key": "price",
-                                    "value": 4,
+                                    "value": 13,
                                     "type": "text"
                                 },
                                 {
@@ -637,12 +663,85 @@
                                 },
                                 {
                                     "key": "store_id",
-                                    "value": 16,
+                                    "value": 19,
                                     "type": "text"
                                 },
                                 {
                                     "key": "delivery_fee",
-                                    "value": 5,
+                                    "value": 19,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update\nUpdate the product details.",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:product_id",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/products\/:product_id",
+                            "variable": [
+                                {
+                                    "id": "product_id",
+                                    "key": "product_id",
+                                    "value": "a",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "minus",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "inventore",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "price",
+                                    "value": 9,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "number_of_stock",
+                                    "value": 13,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "delivery_fee",
+                                    "value": 9,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "store_id",
+                                    "value": 18,
                                     "type": "text"
                                 },
                                 {
@@ -666,11 +765,11 @@
                     "name": "Get User details\nGet all details about a user - seller",
                     "request": {
                         "url": {
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": "{{baseUrl}}",
                             "path": "api\/user",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/user"
+                            "raw": "https:\/\/{{baseUrl}}\/api\/user"
                         },
                         "method": "GET",
                         "header": [

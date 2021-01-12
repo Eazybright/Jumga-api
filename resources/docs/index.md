@@ -29,12 +29,12 @@ This documentation aims to provide all the information you need to work with our
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
 <script>
-    var baseUrl = "http://localhost:8000";
+    var baseUrl = "https://jumga-flutterwave-solution-api.herokuapp.com/";
 </script>
 <script src="js/tryitout-2.4.2.js"></script>
 
 > Base URL
 
 ```yaml
-http://localhost:8000
+https://jumga-flutterwave-solution-api.herokuapp.com/
 ```

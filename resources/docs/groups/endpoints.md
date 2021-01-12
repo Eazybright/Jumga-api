@@ -10,14 +10,14 @@
 
 ```bash
 curl -X GET \
-    -G "http://localhost:8000/oauth/authorize" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/authorize"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize"
 );
 
 let headers = {
@@ -503,14 +503,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost:8000/oauth/authorize" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/authorize"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize"
 );
 
 let headers = {
@@ -557,14 +557,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost:8000/oauth/authorize" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/authorize"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/authorize"
 );
 
 let headers = {
@@ -611,14 +611,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost:8000/oauth/token" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/token" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/token"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/token"
 );
 
 let headers = {
@@ -665,14 +665,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost:8000/oauth/tokens" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/tokens"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens"
 );
 
 let headers = {
@@ -1158,14 +1158,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost:8000/oauth/tokens/in" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/porro" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/tokens/in"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/porro"
 );
 
 let headers = {
@@ -1218,14 +1218,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost:8000/oauth/token/refresh" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/token/refresh" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/token/refresh"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/token/refresh"
 );
 
 let headers = {
@@ -1272,14 +1272,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost:8000/oauth/clients" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/clients"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients"
 );
 
 let headers = {
@@ -1765,14 +1765,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost:8000/oauth/clients" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/clients"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients"
 );
 
 let headers = {
@@ -1819,14 +1819,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "http://localhost:8000/oauth/clients/tempore" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/vero" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/clients/tempore"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/vero"
 );
 
 let headers = {
@@ -1879,14 +1879,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost:8000/oauth/clients/quis" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/alias" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/clients/quis"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/alias"
 );
 
 let headers = {
@@ -1939,14 +1939,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost:8000/oauth/scopes" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/scopes" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/scopes"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/scopes"
 );
 
 let headers = {
@@ -2432,14 +2432,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost:8000/oauth/personal-access-tokens" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/personal-access-tokens"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens"
 );
 
 let headers = {
@@ -2925,14 +2925,14 @@ fetch(url, {
 
 ```bash
 curl -X POST \
-    "http://localhost:8000/oauth/personal-access-tokens" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/personal-access-tokens"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens"
 );
 
 let headers = {
@@ -2979,14 +2979,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "http://localhost:8000/oauth/personal-access-tokens/deleniti" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/laborum" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/oauth/personal-access-tokens/deleniti"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/laborum"
 );
 
 let headers = {
@@ -3039,14 +3039,14 @@ fetch(url, {
 
 ```bash
 curl -X GET \
-    -G "http://localhost:8000/" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost:8000/"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/"
 );
 
 let headers = {
