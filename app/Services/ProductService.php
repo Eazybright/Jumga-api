@@ -105,6 +105,17 @@ class ProductService
     }
   }
 
+  public function get_product_by_user_id($user_id)
+  {
+    $products = $this->productRepository->get_by_user_id($user_id);
+
+    if($products == null){
+      return $this->error_message('products not found');
+    }
+
+    return $products;
+  }
+
   protected function error_message($message)
   {
     return  array(

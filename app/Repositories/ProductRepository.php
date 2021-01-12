@@ -49,4 +49,9 @@ class ProductRepository implements ProductRepositoryInterface
     $product->save();
     return $product;
   }
+
+  public function get_by_user_id($user_id)
+  {
+    return Product::with('images')->where('user_id', $user_id)->get();
+  }
 }

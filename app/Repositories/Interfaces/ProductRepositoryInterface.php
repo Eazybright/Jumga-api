@@ -9,4 +9,6 @@ interface ProductRepositoryInterface
   public function update($params, $user_id, $product_id);
 
   public function checkIfIdExists($product_id);
+
+  public function get_by_user_id($user_id);
 }
