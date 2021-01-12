@@ -14,7 +14,7 @@ curl -X POST \
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"sit","email":"sit","password":"iste","phone_number":"harum","role":"harum","account_number":"qui","account_name":"voluptates","account_bank_code":16,"country":"nemo","image":"dolores","transaction_id":15,"location":"eos","description":"ut","name_of_store":"quasi"}'
+    -d '{"name":"dolorum","email":"autem","password":"explicabo","phone_number":"laboriosam","role":"sint","account_number":"corrupti","account_name":"nulla","account_bank_code":20,"country":"qui","image":"illum","transaction_id":19,"location":"ab","description":"nostrum","name_of_store":"reiciendis"}'
 
 ```
 
@@ -29,20 +29,20 @@ let headers = {
 };
 
 let body = {
-    "name": "sit",
-    "email": "sit",
-    "password": "iste",
-    "phone_number": "harum",
-    "role": "harum",
-    "account_number": "qui",
-    "account_name": "voluptates",
-    "account_bank_code": 16,
-    "country": "nemo",
-    "image": "dolores",
-    "transaction_id": 15,
-    "location": "eos",
-    "description": "ut",
-    "name_of_store": "quasi"
+    "name": "dolorum",
+    "email": "autem",
+    "password": "explicabo",
+    "phone_number": "laboriosam",
+    "role": "sint",
+    "account_number": "corrupti",
+    "account_name": "nulla",
+    "account_bank_code": 20,
+    "country": "qui",
+    "image": "illum",
+    "transaction_id": 19,
+    "location": "ab",
+    "description": "nostrum",
+    "name_of_store": "reiciendis"
 }
 
 fetch(url, {
@@ -169,7 +169,7 @@ curl -X POST \
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"quisquam","password":"magni"}'
+    -d '{"email":"amet","password":"eius"}'
 
 ```
 
@@ -184,8 +184,8 @@ let headers = {
 };
 
 let body = {
-    "email": "quisquam",
-    "password": "magni"
+    "email": "amet",
+    "password": "eius"
 }
 
 fetch(url, {

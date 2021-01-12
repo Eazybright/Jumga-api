@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "JUMGA FOR FLUTTERWAVE API",
-        "_postman_id": "85fe60d3-0c24-4891-ada3-a0d5f61073ac",
+        "_postman_id": "114b6ed2-2308-4a8d-8de1-2c41a20589e8",
         "description": "This is the api docs for backend implementation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"sit\",\n    \"email\": \"sit\",\n    \"password\": \"iste\",\n    \"phone_number\": \"harum\",\n    \"role\": \"harum\",\n    \"account_number\": \"qui\",\n    \"account_name\": \"voluptates\",\n    \"account_bank_code\": 16,\n    \"country\": \"nemo\",\n    \"image\": \"dolores\",\n    \"transaction_id\": 15,\n    \"location\": \"eos\",\n    \"description\": \"ut\",\n    \"name_of_store\": \"quasi\"\n}"
+                            "raw": "{\n    \"name\": \"dolorum\",\n    \"email\": \"autem\",\n    \"password\": \"explicabo\",\n    \"phone_number\": \"laboriosam\",\n    \"role\": \"sint\",\n    \"account_number\": \"corrupti\",\n    \"account_name\": \"nulla\",\n    \"account_bank_code\": 20,\n    \"country\": \"qui\",\n    \"image\": \"illum\",\n    \"transaction_id\": 19,\n    \"location\": \"ab\",\n    \"description\": \"nostrum\",\n    \"name_of_store\": \"reiciendis\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -74,7 +74,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"quisquam\",\n    \"password\": \"magni\"\n}"
+                            "raw": "{\n    \"email\": \"amet\",\n    \"password\": \"eius\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -247,7 +247,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "ratione",
+                                    "value": "porro",
                                     "description": ""
                                 }
                             ]
@@ -371,7 +371,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "maiores",
+                                    "value": "vero",
                                     "description": ""
                                 }
                             ]
@@ -408,7 +408,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "eum",
+                                    "value": "alias",
                                     "description": ""
                                 }
                             ]
@@ -532,7 +532,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "id",
+                                    "value": "laborum",
                                     "description": ""
                                 }
                             ]
@@ -582,6 +582,176 @@
                         "auth": {
                             "type": "noauth"
                         }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Products",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get user products\nDisplay a listing of all user products.",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create\nStore a newly created product.",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "ut",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "enim",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "price",
+                                    "value": 13,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "number_of_stock",
+                                    "value": 6,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "store_id",
+                                    "value": 19,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "delivery_fee",
+                                    "value": 19,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update\nUpdate the product details.",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:product_id",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/products\/:product_id",
+                            "variable": [
+                                {
+                                    "id": "product_id",
+                                    "key": "product_id",
+                                    "value": "a",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "minus",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "inventore",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "price",
+                                    "value": 9,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "number_of_stock",
+                                    "value": 13,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "delivery_fee",
+                                    "value": 9,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "store_id",
+                                    "value": 18,
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": ""
                     },
                     "response": []
                 }
