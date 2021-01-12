@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "JUMGA FOR FLUTTERWAVE API",
-        "_postman_id": "114b6ed2-2308-4a8d-8de1-2c41a20589e8",
+        "_postman_id": "b334daa7-5bda-4e10-a569-90a78d85f758",
         "description": "This is the api docs for backend implementation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"dolorum\",\n    \"email\": \"autem\",\n    \"password\": \"explicabo\",\n    \"phone_number\": \"laboriosam\",\n    \"role\": \"sint\",\n    \"account_number\": \"corrupti\",\n    \"account_name\": \"nulla\",\n    \"account_bank_code\": 20,\n    \"country\": \"qui\",\n    \"image\": \"illum\",\n    \"transaction_id\": 19,\n    \"location\": \"ab\",\n    \"description\": \"nostrum\",\n    \"name_of_store\": \"reiciendis\"\n}"
+                            "raw": "{\n    \"name\": \"molestiae\",\n    \"email\": \"et\",\n    \"password\": \"consequatur\",\n    \"phone_number\": \"sunt\",\n    \"role\": \"ipsam\",\n    \"account_number\": \"ut\",\n    \"account_name\": \"quae\",\n    \"account_bank_code\": 2,\n    \"country\": \"reprehenderit\",\n    \"image\": \"omnis\",\n    \"transaction_id\": 14,\n    \"location\": \"quidem\",\n    \"description\": \"nesciunt\",\n    \"name_of_store\": \"porro\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -74,7 +74,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"amet\",\n    \"password\": \"eius\"\n}"
+                            "raw": "{\n    \"email\": \"voluptatem\",\n    \"password\": \"sunt\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -247,7 +247,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "porro",
+                                    "value": "consequatur",
                                     "description": ""
                                 }
                             ]
@@ -371,7 +371,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "vero",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -408,7 +408,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "alias",
+                                    "value": "voluptate",
                                     "description": ""
                                 }
                             ]
@@ -532,7 +532,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "laborum",
+                                    "value": "soluta",
                                     "description": ""
                                 }
                             ]
@@ -592,7 +592,7 @@
             "description": "",
             "item": [
                 {
-                    "name": "Get user products\nDisplay a listing of all user products.",
+                    "name": "Get all products\nDisplay a listing of all products.",
                     "request": {
                         "url": {
                             "protocol": "https",
@@ -613,7 +613,47 @@
                             }
                         ],
                         "body": null,
-                        "description": ""
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get a product\nGet product details by its id",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/products\/:product_id",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/products\/:product_id",
+                            "variable": [
+                                {
+                                    "id": "product_id",
+                                    "key": "product_id",
+                                    "value": "iure",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": []
                 },
@@ -643,32 +683,32 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "ut",
+                                    "value": "cum",
                                     "type": "text"
                                 },
                                 {
                                     "key": "description",
-                                    "value": "enim",
+                                    "value": "et",
                                     "type": "text"
                                 },
                                 {
                                     "key": "price",
-                                    "value": 13,
-                                    "type": "text"
-                                },
-                                {
-                                    "key": "number_of_stock",
                                     "value": 6,
                                     "type": "text"
                                 },
                                 {
+                                    "key": "number_of_stock",
+                                    "value": 2,
+                                    "type": "text"
+                                },
+                                {
                                     "key": "store_id",
-                                    "value": 19,
+                                    "value": 10,
                                     "type": "text"
                                 },
                                 {
                                     "key": "delivery_fee",
-                                    "value": 19,
+                                    "value": 16,
                                     "type": "text"
                                 },
                                 {
@@ -695,7 +735,7 @@
                                 {
                                     "id": "product_id",
                                     "key": "product_id",
-                                    "value": "a",
+                                    "value": "blanditiis",
                                     "description": ""
                                 }
                             ]
@@ -716,22 +756,22 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "minus",
+                                    "value": "illo",
                                     "type": "text"
                                 },
                                 {
                                     "key": "description",
-                                    "value": "inventore",
+                                    "value": "dolor",
                                     "type": "text"
                                 },
                                 {
                                     "key": "price",
-                                    "value": 9,
+                                    "value": 4,
                                     "type": "text"
                                 },
                                 {
                                     "key": "number_of_stock",
-                                    "value": 13,
+                                    "value": 9,
                                     "type": "text"
                                 },
                                 {
@@ -741,7 +781,7 @@
                                 },
                                 {
                                     "key": "store_id",
-                                    "value": 18,
+                                    "value": 14,
                                     "type": "text"
                                 },
                                 {
@@ -752,6 +792,78 @@
                             ]
                         },
                         "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Stores",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get all stores\nDisplay a listing of all stores.",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/stores",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/stores"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get a store\nGet store details by its id",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/stores\/:store_id",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/stores\/:store_id",
+                            "variable": [
+                                {
+                                    "id": "store_id",
+                                    "key": "store_id",
+                                    "value": "fuga",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": []
                 }

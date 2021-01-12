@@ -11,4 +11,8 @@ interface ProductRepositoryInterface
   public function checkIfIdExists($product_id);
 
   public function get_by_user_id($user_id);
+
+  public function get();
+
+  public function get_by_id($product_id);
 }

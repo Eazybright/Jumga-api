@@ -30,10 +30,7 @@ class PaymentService
       $result = json_decode($response->getBody(), true);
       return  $result["data"]["subaccount_id"];       
     }catch (\Exception $e) {
-      return  array(
-            'status' => false,
-            'message' => $e->getMessage()
-          );
+      return general_error_message($e->getMessage());
     }
   }
 
@@ -58,10 +55,7 @@ class PaymentService
         );
       }       
     }catch (\Exception $e) {
-      return  array(
-            'status' => false,
-            'message' => $e->getMessage()
-          );
+      return general_error_message($e->getMessage());
     }
   }
 
@@ -85,10 +79,7 @@ class PaymentService
             'data' => $result
           );       
     }catch (\Exception $e) {
-      return  array(
-            'status' => false,
-            'message' => $e->getMessage()
-          );
+      return  general_error_message($e->getMessage());
     }
   }
 }

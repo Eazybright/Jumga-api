@@ -27,10 +27,20 @@ Route::group(['middleware' => 'auth:api'], function(){
   Route::get('/user', 'UserController@get_user_details');
 
   Route::group(['prefix' => 'products'], function(){
-    Route::get('/', 'ProductsController@index');
+    Route::get('/', 'ProductsController@index')->withoutMiddleware('auth:api');
+    Route::get('/{product_id}', 'ProductsController@get_by_id')->withoutMiddleware('auth:api');
     Route::post('/', 'ProductsController@store');
     Route::put('/{product_id}', 'ProductsController@update');
       // Route::get('/:id', 'HostelController@getHostel');
-      // Route::delete('/:id', 'HostelController@delete');
+      // Route::delete('/:id', 'HostelController@delete'); 
+  });
+
+  Route::group(['prefix' => 'stores'], function(){
+    Route::get('/', 'StoreController@index')->withoutMiddleware('auth:api');
+    Route::get('/{store_id}', 'StoreController@show')->withoutMiddleware('auth:api');
+    // Route::post('/', 'ProductsController@store');
+    // Route::put('/{product_id}', 'ProductsController@update');
+      // Route::get('/:id', 'HostelController@getHostel');
+      // Route::delete('/:id', 'HostelController@delete'); 
   });
 });
