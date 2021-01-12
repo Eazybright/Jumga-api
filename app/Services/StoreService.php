@@ -26,12 +26,12 @@ class StoreService
 
   public function get_by_id($store_id)
   {
-    $store_id = $this->storeRepository->get_by_id($store_id);
+    $stores = $this->storeRepository->get_by_id($store_id);
 
-    if($store_id == null){
+    if($stores == null){
       return general_error_message('Store not found');
     }
 
-    return $store_id;
+    return $stores;
   }
 }
