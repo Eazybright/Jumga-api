@@ -91,7 +91,22 @@ class StoreController extends Controller
    *         "user_id": 4,
    *         "dispatch_rider_id": 2,
    *         "created_at": "2021-01-06T18:46:44.000000Z",
-   *         "updated_at": "2021-01-06T18:46:44.000000Z"
+   *         "updated_at": "2021-01-06T18:46:44.000000Z",
+   *         "products": [
+   *             {
+   *                 "id": 1,
+   *                 "name": "eazy shoes",
+   *                 "description": "A collection os shoes",
+   *                 "price": "50000",
+   *                 "number_of_stock": "80",
+   *                 "public_reference_id": "5ffc36bdd1b0f",
+   *                 "delivery_fee": "800",
+   *                 "user_id": 4,
+   *                 "store_id": 1,
+   *                 "created_at": "2021-01-11T11:30:05.000000Z",
+   *                 "updated_at": "2021-01-12T12:43:08.000000Z"
+   *             }
+   *         ]
    *     }
    * }
    */

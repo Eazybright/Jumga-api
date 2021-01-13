@@ -14,7 +14,7 @@ curl -X POST \
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"molestiae","email":"et","password":"consequatur","phone_number":"sunt","role":"ipsam","account_number":"ut","account_name":"quae","account_bank_code":2,"country":"reprehenderit","image":"omnis","transaction_id":14,"location":"quidem","description":"nesciunt","name_of_store":"porro"}'
+    -d '{"name":"dignissimos","email":"et","password":"dicta","phone_number":"tempora","role":"at","account_number":"commodi","account_name":"officia","account_bank_code":9,"country":"architecto","image":"quibusdam","transaction_id":20,"location":"voluptas","description":"amet","name_of_store":"omnis"}'
 
 ```
 
@@ -29,20 +29,20 @@ let headers = {
 };
 
 let body = {
-    "name": "molestiae",
+    "name": "dignissimos",
     "email": "et",
-    "password": "consequatur",
-    "phone_number": "sunt",
-    "role": "ipsam",
-    "account_number": "ut",
-    "account_name": "quae",
-    "account_bank_code": 2,
-    "country": "reprehenderit",
-    "image": "omnis",
-    "transaction_id": 14,
-    "location": "quidem",
-    "description": "nesciunt",
-    "name_of_store": "porro"
+    "password": "dicta",
+    "phone_number": "tempora",
+    "role": "at",
+    "account_number": "commodi",
+    "account_name": "officia",
+    "account_bank_code": 9,
+    "country": "architecto",
+    "image": "quibusdam",
+    "transaction_id": 20,
+    "location": "voluptas",
+    "description": "amet",
+    "name_of_store": "omnis"
 }
 
 fetch(url, {
@@ -169,7 +169,7 @@ curl -X POST \
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"voluptatem","password":"sunt"}'
+    -d '{"email":"rerum","password":"temporibus"}'
 
 ```
 
@@ -184,8 +184,8 @@ let headers = {
 };
 
 let body = {
-    "email": "voluptatem",
-    "password": "sunt"
+    "email": "rerum",
+    "password": "temporibus"
 }
 
 fetch(url, {

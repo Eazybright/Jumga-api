@@ -53,7 +53,7 @@ paths:
                                 name:
                                     type: string
                                     description: 'The fullname of the user'
-                                    example: molestiae
+                                    example: dignissimos
                                 email:
                                     type: email
                                     description: 'The email of the user'
@@ -61,51 +61,51 @@ paths:
                                 password:
                                     type: password
                                     description: 'The password of the user account'
-                                    example: consequatur
+                                    example: dicta
                                 phone_number:
                                     type: numeric
                                     description: 'The phone number of the user'
-                                    example: sunt
+                                    example: tempora
                                 role:
                                     type: string
                                     description: 'The role of the user either seller or rider'
-                                    example: ipsam
+                                    example: at
                                 account_number:
                                     type: The
                                     description: 'account number of the user'
-                                    example: ut
+                                    example: commodi
                                 account_name:
                                     type: string
                                     description: 'The bank account name of the user'
-                                    example: quae
+                                    example: officia
                                 account_bank_code:
                                     type: integer
                                     description: 'The bank code of the user preferred bank'
-                                    example: 2
+                                    example: 9
                                 country:
                                     type: string
                                     description: 'The country of residence of the user'
-                                    example: reprehenderit
+                                    example: architecto
                                 image:
                                     type: filepath
                                     description: 'The cover image for the store'
-                                    example: omnis
+                                    example: quibusdam
                                 transaction_id:
                                     type: integer
                                     description: 'This is the transaction_id of the payment evidence (you can get this during the payment callback - `data.id`)'
-                                    example: 14
+                                    example: 20
                                 location:
                                     type: string
                                     description: 'The location of the store'
-                                    example: quidem
+                                    example: voluptas
                                 description:
                                     type: string
                                     description: 'The description of the store'
-                                    example: nesciunt
+                                    example: amet
                                 name_of_store:
                                     type: string
                                     description: 'The name of the store'
-                                    example: porro
+                                    example: omnis
                             required:
                                 - name
                                 - email
@@ -167,11 +167,11 @@ paths:
                                 email:
                                     type: email
                                     description: 'The email of the user'
-                                    example: voluptatem
+                                    example: rerum
                                 password:
                                     type: password
                                     description: 'The password of the user account'
-                                    example: sunt
+                                    example: temporibus
                             required:
                                 - email
                                 - password
@@ -353,7 +353,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: consequatur
+                example: pariatur
                 required: true
                 schema:
                     type: string
@@ -493,7 +493,7 @@ paths:
                 in: path
                 name: client_id
                 description: ''
-                example: qui
+                example: laudantium
                 required: true
                 schema:
                     type: string
@@ -629,7 +629,7 @@ paths:
                 in: path
                 name: token_id
                 description: ''
-                example: soluta
+                example: assumenda
                 required: true
                 schema:
                     type: string
@@ -738,27 +738,27 @@ paths:
                                 name:
                                     type: string
                                     description: 'The name of the product'
-                                    example: cum
+                                    example: nostrum
                                 description:
                                     type: string
                                     description: 'The description of the product'
-                                    example: et
+                                    example: ea
                                 price:
                                     type: integer
                                     description: 'The price of the product'
-                                    example: 6
+                                    example: 9
                                 number_of_stock:
                                     type: integer
                                     description: 'The number of available products'
-                                    example: 2
+                                    example: 9
                                 store_id:
                                     type: integer
                                     description: 'The id of the store you want to create product for'
-                                    example: 10
+                                    example: 15
                                 delivery_fee:
                                     type: integer
                                     description: 'The delivery fee of the product'
-                                    example: 16
+                                    example: 15
                                 image:
                                     type: string
                                     format: binary
@@ -853,23 +853,23 @@ paths:
                                 name:
                                     type: string
                                     description: 'The name of the product'
-                                    example: illo
+                                    example: ut
                                 description:
                                     type: string
                                     description: 'The description of the product'
-                                    example: dolor
+                                    example: dolorum
                                 price:
                                     type: integer
                                     description: 'The price of the product'
-                                    example: 4
+                                    example: 12
                                 number_of_stock:
                                     type: integer
                                     description: 'The number of available products'
-                                    example: 9
+                                    example: 18
                                 delivery_fee:
                                     type: integer
                                     description: 'The delivery fee of the product'
-                                    example: 9
+                                    example: 1
                                 image:
                                     type: string
                                     format: binary
@@ -877,7 +877,7 @@ paths:
                                 store_id:
                                     type: integer
                                     description: 'The id of the store you want to create product for'
-                                    example: 14
+                                    example: 18
                             required:
                                 - name
                                 - description
@@ -891,7 +891,7 @@ paths:
                 in: path
                 name: product_id
                 description: ''
-                example: iure
+                example: ut
                 required: true
                 schema:
                     type: string
@@ -961,11 +961,11 @@ paths:
                                 example:
                                     status: true
                                     message: Successful
-                                    data: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z' }
+                                    data: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z', products: [{ id: 1, name: 'eazy shoes', description: 'A collection os shoes', price: '50000', number_of_stock: '80', public_reference_id: 5ffc36bdd1b0f, delivery_fee: '800', user_id: 4, store_id: 1, created_at: '2021-01-11T11:30:05.000000Z', updated_at: '2021-01-12T12:43:08.000000Z' }] }
                                 properties:
                                     status: { type: boolean, example: true }
                                     message: { type: string, example: Successful }
-                                    data: { type: object, example: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z' } }
+                                    data: { type: object, example: { id: 1, name: 'Eazbright store', image: 'https://res.cloudinary.com/api-seekhostel/image/upload/v1609958802/JUMGA_FOR_FLUTTERWAVE%20-%20Shop%20Images/itlylp997digqwvq8frb.png', location: 'ikeja, lagos', public_reference_id: '', description: 'a very conducive store', user_id: 4, dispatch_rider_id: 2, created_at: '2021-01-06T18:46:44.000000Z', updated_at: '2021-01-06T18:46:44.000000Z', products: [{ id: 1, name: 'eazy shoes', description: 'A collection os shoes', price: '50000', number_of_stock: '80', public_reference_id: 5ffc36bdd1b0f, delivery_fee: '800', user_id: 4, store_id: 1, created_at: '2021-01-11T11:30:05.000000Z', updated_at: '2021-01-12T12:43:08.000000Z' }] } }
             tags:
                 - Stores
             security: []
@@ -974,7 +974,7 @@ paths:
                 in: path
                 name: store_id
                 description: ''
-                example: fuga
+                example: repellat
                 required: true
                 schema:
                     type: string
