@@ -31,6 +31,6 @@ class StoreRepository implements StoreRepositoryInterface
 
   public function get_by_id($store_id)
   {
-    return Store::where('id', $store_id)->first();
+    return Store::with('products')->where('id', $store_id)->first(); 
   }
 }

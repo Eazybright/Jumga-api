@@ -20,4 +20,9 @@ class Store extends Model
   {
     return $this->belongsTo('App\Models\User', 'dispatch_rider_id');
   }
+
+  public function products()
+  {
+    return $this->hasMany('App\Models\Product');
+  }
 }

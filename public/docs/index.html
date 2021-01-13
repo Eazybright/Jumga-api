@@ -44,7 +44,7 @@
                             <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
                     </ul>
             <ul class="toc-footer" id="last-updated">
-            <li>Last updated: January 12 2021</li>
+            <li>Last updated: January 13 2021</li>
         </ul>
 </div>
 <div class="page-wrapper">
@@ -72,7 +72,7 @@
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"molestiae","email":"et","password":"consequatur","phone_number":"sunt","role":"ipsam","account_number":"ut","account_name":"quae","account_bank_code":2,"country":"reprehenderit","image":"omnis","transaction_id":14,"location":"quidem","description":"nesciunt","name_of_store":"porro"}'
+    -d '{"name":"dignissimos","email":"et","password":"dicta","phone_number":"tempora","role":"at","account_number":"commodi","account_name":"officia","account_bank_code":9,"country":"architecto","image":"quibusdam","transaction_id":20,"location":"voluptas","description":"amet","name_of_store":"omnis"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/register"
@@ -84,20 +84,20 @@ let headers = {
 };
 
 let body = {
-    "name": "molestiae",
+    "name": "dignissimos",
     "email": "et",
-    "password": "consequatur",
-    "phone_number": "sunt",
-    "role": "ipsam",
-    "account_number": "ut",
-    "account_name": "quae",
-    "account_bank_code": 2,
-    "country": "reprehenderit",
-    "image": "omnis",
-    "transaction_id": 14,
-    "location": "quidem",
-    "description": "nesciunt",
-    "name_of_store": "porro"
+    "password": "dicta",
+    "phone_number": "tempora",
+    "role": "at",
+    "account_number": "commodi",
+    "account_name": "officia",
+    "account_bank_code": 9,
+    "country": "architecto",
+    "image": "quibusdam",
+    "transaction_id": 20,
+    "location": "voluptas",
+    "description": "amet",
+    "name_of_store": "omnis"
 }
 
 fetch(url, {
@@ -214,7 +214,7 @@ The name of the store</p>
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"voluptatem","password":"sunt"}'
+    -d '{"email":"rerum","password":"temporibus"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/login"
@@ -226,8 +226,8 @@ let headers = {
 };
 
 let body = {
-    "email": "voluptatem",
-    "password": "sunt"
+    "email": "rerum",
+    "password": "temporibus"
 }
 
 fetch(url, {
@@ -1380,11 +1380,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/consequatur" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/pariatur" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/consequatur"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/tokens/pariatur"
 );
 
 let headers = {
@@ -1988,11 +1988,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/qui" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/laudantium" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/qui"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/laudantium"
 );
 
 let headers = {
@@ -2035,11 +2035,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/voluptate" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/magnam" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/voluptate"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/magnam"
 );
 
 let headers = {
@@ -3081,11 +3081,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/soluta" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/assumenda" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/soluta"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/assumenda"
 );
 
 let headers = {
@@ -3376,11 +3376,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/iure" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/iure"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/ut"
 );
 
 let headers = {
@@ -3464,13 +3464,13 @@ fetch(url, {
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/products" \
     -H "Content-Type: multipart/form-data" \
     -H "Accept: application/json" \
-    -F "name=cum" \
-    -F "description=et" \
-    -F "price=6" \
-    -F "number_of_stock=2" \
-    -F "store_id=10" \
-    -F "delivery_fee=16" \
-    -F "image=@/tmp/phpLPBCkH" </code></pre>
+    -F "name=nostrum" \
+    -F "description=ea" \
+    -F "price=9" \
+    -F "number_of_stock=9" \
+    -F "store_id=15" \
+    -F "delivery_fee=15" \
+    -F "image=@/tmp/phpOQmpNf" </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/products"
 );
@@ -3481,12 +3481,12 @@ let headers = {
 };
 
 const body = new FormData();
-body.append('name', 'cum');
-body.append('description', 'et');
-body.append('price', '6');
-body.append('number_of_stock', '2');
-body.append('store_id', '10');
-body.append('delivery_fee', '16');
+body.append('name', 'nostrum');
+body.append('description', 'ea');
+body.append('price', '9');
+body.append('number_of_stock', '9');
+body.append('store_id', '15');
+body.append('delivery_fee', '15');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -3581,18 +3581,18 @@ The image(s) of the product, it accepts an array of images (image MIMETYPE, FILE
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X PUT \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/blanditiis" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/ex" \
     -H "Content-Type: multipart/form-data" \
     -H "Accept: application/json" \
-    -F "name=illo" \
-    -F "description=dolor" \
-    -F "price=4" \
-    -F "number_of_stock=9" \
-    -F "delivery_fee=9" \
-    -F "store_id=14" \
-    -F "image=@/tmp/phpGK229J" </code></pre>
+    -F "name=ut" \
+    -F "description=dolorum" \
+    -F "price=12" \
+    -F "number_of_stock=18" \
+    -F "delivery_fee=1" \
+    -F "store_id=18" \
+    -F "image=@/tmp/phpxdhqbe" </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/blanditiis"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/ex"
 );
 
 let headers = {
@@ -3601,12 +3601,12 @@ let headers = {
 };
 
 const body = new FormData();
-body.append('name', 'illo');
-body.append('description', 'dolor');
-body.append('price', '4');
-body.append('number_of_stock', '9');
-body.append('delivery_fee', '9');
-body.append('store_id', '14');
+body.append('name', 'ut');
+body.append('description', 'dolorum');
+body.append('price', '12');
+body.append('number_of_stock', '18');
+body.append('delivery_fee', '1');
+body.append('store_id', '18');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -3781,11 +3781,11 @@ fetch(url, {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/stores/fuga" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/stores/repellat" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/stores/fuga"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/stores/repellat"
 );
 
 let headers = {
@@ -3813,7 +3813,22 @@ fetch(url, {
         "user_id": 4,
         "dispatch_rider_id": 2,
         "created_at": "2021-01-06T18:46:44.000000Z",
-        "updated_at": "2021-01-06T18:46:44.000000Z"
+        "updated_at": "2021-01-06T18:46:44.000000Z",
+        "products": [
+            {
+                "id": 1,
+                "name": "eazy shoes",
+                "description": "A collection os shoes",
+                "price": "50000",
+                "number_of_stock": "80",
+                "public_reference_id": "5ffc36bdd1b0f",
+                "delivery_fee": "800",
+                "user_id": 4,
+                "store_id": 1,
+                "created_at": "2021-01-11T11:30:05.000000Z",
+                "updated_at": "2021-01-12T12:43:08.000000Z"
+            }
+        ]
     }
 }</code></pre>
 <div id="execution-results-GETapi-stores--store_id-" hidden>

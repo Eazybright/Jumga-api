@@ -107,14 +107,14 @@ Get product details by its id
 
 ```bash
 curl -X GET \
-    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/iure" \
+    -G "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/ut" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/iure"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/ut"
 );
 
 let headers = {
@@ -209,13 +209,13 @@ curl -X POST \
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/products" \
     -H "Content-Type: multipart/form-data" \
     -H "Accept: application/json" \
-    -F "name=cum" \
-    -F "description=et" \
-    -F "price=6" \
-    -F "number_of_stock=2" \
-    -F "store_id=10" \
-    -F "delivery_fee=16" \
-    -F "image=@/tmp/phpLPBCkH" 
+    -F "name=nostrum" \
+    -F "description=ea" \
+    -F "price=9" \
+    -F "number_of_stock=9" \
+    -F "store_id=15" \
+    -F "delivery_fee=15" \
+    -F "image=@/tmp/phpOQmpNf" 
 ```
 
 ```javascript
@@ -229,12 +229,12 @@ let headers = {
 };
 
 const body = new FormData();
-body.append('name', 'cum');
-body.append('description', 'et');
-body.append('price', '6');
-body.append('number_of_stock', '2');
-body.append('store_id', '10');
-body.append('delivery_fee', '16');
+body.append('name', 'nostrum');
+body.append('description', 'ea');
+body.append('price', '9');
+body.append('number_of_stock', '9');
+body.append('store_id', '15');
+body.append('delivery_fee', '15');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -339,21 +339,21 @@ Update the product details.
 
 ```bash
 curl -X PUT \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/blanditiis" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/ex" \
     -H "Content-Type: multipart/form-data" \
     -H "Accept: application/json" \
-    -F "name=illo" \
-    -F "description=dolor" \
-    -F "price=4" \
-    -F "number_of_stock=9" \
-    -F "delivery_fee=9" \
-    -F "store_id=14" \
-    -F "image=@/tmp/phpGK229J" 
+    -F "name=ut" \
+    -F "description=dolorum" \
+    -F "price=12" \
+    -F "number_of_stock=18" \
+    -F "delivery_fee=1" \
+    -F "store_id=18" \
+    -F "image=@/tmp/phpxdhqbe" 
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/blanditiis"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/api/products/ex"
 );
 
 let headers = {
@@ -362,12 +362,12 @@ let headers = {
 };
 
 const body = new FormData();
-body.append('name', 'illo');
-body.append('description', 'dolor');
-body.append('price', '4');
-body.append('number_of_stock', '9');
-body.append('delivery_fee', '9');
-body.append('store_id', '14');
+body.append('name', 'ut');
+body.append('description', 'dolorum');
+body.append('price', '12');
+body.append('number_of_stock', '18');
+body.append('delivery_fee', '1');
+body.append('store_id', '18');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
