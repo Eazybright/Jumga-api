@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "JUMGA FOR FLUTTERWAVE API",
-        "_postman_id": "a8a3e92f-49b0-44d6-a57b-4c89d2b5bac9",
+        "_postman_id": "a5ed011a-92ca-4c69-8842-b7682b267ce5",
         "description": "This is the api docs for backend implementation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"dignissimos\",\n    \"email\": \"et\",\n    \"password\": \"dicta\",\n    \"phone_number\": \"tempora\",\n    \"role\": \"at\",\n    \"account_number\": \"commodi\",\n    \"account_name\": \"officia\",\n    \"account_bank_code\": 9,\n    \"country\": \"architecto\",\n    \"image\": \"quibusdam\",\n    \"transaction_id\": 20,\n    \"location\": \"voluptas\",\n    \"description\": \"amet\",\n    \"name_of_store\": \"omnis\"\n}"
+                            "raw": "{\n    \"name\": \"est\",\n    \"email\": \"illum\",\n    \"password\": \"minus\",\n    \"phone_number\": \"sit\",\n    \"role\": \"debitis\",\n    \"account_number\": \"accusantium\",\n    \"account_name\": \"rem\",\n    \"account_bank_code\": 10,\n    \"country\": \"sed\",\n    \"image\": \"ut\",\n    \"transaction_id\": 18,\n    \"location\": \"quia\",\n    \"description\": \"quidem\",\n    \"name_of_store\": \"neque\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -74,7 +74,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"rerum\",\n    \"password\": \"temporibus\"\n}"
+                            "raw": "{\n    \"email\": \"laboriosam\",\n    \"password\": \"qui\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -371,7 +371,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "laudantium",
+                                    "value": "sit",
                                     "description": ""
                                 }
                             ]
@@ -408,7 +408,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "magnam",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -532,7 +532,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "assumenda",
+                                    "value": "enim",
                                     "description": ""
                                 }
                             ]
@@ -633,7 +633,7 @@
                                 {
                                     "id": "product_id",
                                     "key": "product_id",
-                                    "value": "ut",
+                                    "value": "consectetur",
                                     "description": ""
                                 }
                             ]
@@ -683,32 +683,32 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "nostrum",
+                                    "value": "rerum",
                                     "type": "text"
                                 },
                                 {
                                     "key": "description",
-                                    "value": "ea",
+                                    "value": "consequatur",
                                     "type": "text"
                                 },
                                 {
                                     "key": "price",
-                                    "value": 9,
+                                    "value": 13,
                                     "type": "text"
                                 },
                                 {
                                     "key": "number_of_stock",
-                                    "value": 9,
+                                    "value": 13,
                                     "type": "text"
                                 },
                                 {
                                     "key": "store_id",
-                                    "value": 15,
+                                    "value": 11,
                                     "type": "text"
                                 },
                                 {
                                     "key": "delivery_fee",
-                                    "value": 15,
+                                    "value": 1,
                                     "type": "text"
                                 },
                                 {
@@ -735,7 +735,7 @@
                                 {
                                     "id": "product_id",
                                     "key": "product_id",
-                                    "value": "ex",
+                                    "value": "voluptatibus",
                                     "description": ""
                                 }
                             ]
@@ -756,32 +756,32 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "ut",
+                                    "value": "occaecati",
                                     "type": "text"
                                 },
                                 {
                                     "key": "description",
-                                    "value": "dolorum",
+                                    "value": "alias",
                                     "type": "text"
                                 },
                                 {
                                     "key": "price",
-                                    "value": 12,
+                                    "value": 20,
                                     "type": "text"
                                 },
                                 {
                                     "key": "number_of_stock",
-                                    "value": 18,
+                                    "value": 7,
                                     "type": "text"
                                 },
                                 {
                                     "key": "delivery_fee",
-                                    "value": 1,
+                                    "value": 18,
                                     "type": "text"
                                 },
                                 {
                                     "key": "store_id",
-                                    "value": 18,
+                                    "value": 4,
                                     "type": "text"
                                 },
                                 {
@@ -843,7 +843,7 @@
                                 {
                                     "id": "store_id",
                                     "key": "store_id",
-                                    "value": "repellat",
+                                    "value": "aut",
                                     "description": ""
                                 }
                             ]

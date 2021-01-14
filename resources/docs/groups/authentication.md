@@ -14,7 +14,7 @@ curl -X POST \
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/register" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"name":"dignissimos","email":"et","password":"dicta","phone_number":"tempora","role":"at","account_number":"commodi","account_name":"officia","account_bank_code":9,"country":"architecto","image":"quibusdam","transaction_id":20,"location":"voluptas","description":"amet","name_of_store":"omnis"}'
+    -d '{"name":"dolorem","email":"quo","password":"non","phone_number":"ipsam","role":"earum","account_number":"ipsam","account_name":"minima","account_bank_code":13,"country":"autem","image":"eos","transaction_id":1,"location":"sit","description":"molestiae","name_of_store":"error"}'
 
 ```
 
@@ -29,20 +29,20 @@ let headers = {
 };
 
 let body = {
-    "name": "dignissimos",
-    "email": "et",
-    "password": "dicta",
-    "phone_number": "tempora",
-    "role": "at",
-    "account_number": "commodi",
-    "account_name": "officia",
-    "account_bank_code": 9,
-    "country": "architecto",
-    "image": "quibusdam",
-    "transaction_id": 20,
-    "location": "voluptas",
-    "description": "amet",
-    "name_of_store": "omnis"
+    "name": "dolorem",
+    "email": "quo",
+    "password": "non",
+    "phone_number": "ipsam",
+    "role": "earum",
+    "account_number": "ipsam",
+    "account_name": "minima",
+    "account_bank_code": 13,
+    "country": "autem",
+    "image": "eos",
+    "transaction_id": 1,
+    "location": "sit",
+    "description": "molestiae",
+    "name_of_store": "error"
 }
 
 fetch(url, {
@@ -169,7 +169,7 @@ curl -X POST \
     "https://jumga-flutterwave-solution-api.herokuapp.com/api/auth/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"email":"rerum","password":"temporibus"}'
+    -d '{"email":"facilis","password":"saepe"}'
 
 ```
 
@@ -184,8 +184,8 @@ let headers = {
 };
 
 let body = {
-    "email": "rerum",
-    "password": "temporibus"
+    "email": "facilis",
+    "password": "saepe"
 }
 
 fetch(url, {

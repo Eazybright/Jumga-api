@@ -1819,14 +1819,14 @@ fetch(url, {
 
 ```bash
 curl -X PUT \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/laudantium" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/magni" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/laudantium"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/magni"
 );
 
 let headers = {
@@ -1879,14 +1879,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/magnam" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/et" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/magnam"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/clients/et"
 );
 
 let headers = {
@@ -2979,14 +2979,14 @@ fetch(url, {
 
 ```bash
 curl -X DELETE \
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/assumenda" \
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/dicta" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/assumenda"
+    "https://jumga-flutterwave-solution-api.herokuapp.com/oauth/personal-access-tokens/dicta"
 );
 
 let headers = {

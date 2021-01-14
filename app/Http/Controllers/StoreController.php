@@ -104,7 +104,23 @@ class StoreController extends Controller
    *                 "user_id": 4,
    *                 "store_id": 1,
    *                 "created_at": "2021-01-11T11:30:05.000000Z",
-   *                 "updated_at": "2021-01-12T12:43:08.000000Z"
+   *                 "updated_at": "2021-01-12T12:43:08.000000Z",
+   *                 "images": [
+   *                     {
+   *                         "id": 1,
+   *                         "image": "https://res.cloudinary.com/api-seekhostel/image/upload/v1610364609/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/splnn0brrelkbrxdfgbb.png",
+   *                         "product_id": 1,
+   *                         "created_at": "2021-01-11T11:30:10.000000Z",
+   *                         "updated_at": "2021-01-11T11:30:10.000000Z"
+   *                     },
+   *                     {
+   *                         "id": 2,
+   *                         "image": "https://res.cloudinary.com/api-seekhostel/image/upload/v1610364613/JUMGA_FOR_FLUTTERWAVE%20-%20Product%20Images/v3mkeajh6wklfnzxkneq.png",
+   *                         "product_id": 1,
+   *                         "created_at": "2021-01-11T11:30:15.000000Z",
+   *                         "updated_at": "2021-01-11T11:30:15.000000Z"
+   *                     }
+   *                 ]
    *             }
    *         ]
    *     }
