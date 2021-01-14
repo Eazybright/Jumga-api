@@ -43,7 +43,7 @@
                         "body": {
                             "mode": "raw",
                             "raw": "{\n    \"name\": \"dolorem\",\n    \"email\": \"quo\",\n    \"password\": \"non\",\n    \"phone_number\": \"ipsam\",\n    \"role\": \"earum\",\n    \"account_number\": \"ipsam\",\n    \"account_name\": \"minima\",\n    \"account_bank_code\": 13,\n    \"country\": \"autem\",\n    \"image\": \"eos\",\n    \"transaction_id\": 1,\n    \"location\": \"sit\",\n    \"description\": \"molestiae\",\n    \"name_of_store\": \"error\"\n}"
-                        },
+                           },
                         "description": "",
                         "auth": {
                             "type": "noauth"
