@@ -23,7 +23,7 @@ class CheckoutController extends Controller
     try {
       $data = $this->checkoutService->store_order_details($request->all());
 
-      if(isset($data['status']) && $data['status'] == false ){
+      if((isset($data['status'])) && ($data['status'] == false)){
         return $this->ErrorResponse("Unable to store order details, please try again", 
                 $data['message'], 400);
       }

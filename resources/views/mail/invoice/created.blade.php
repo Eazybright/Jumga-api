@@ -26,10 +26,12 @@ Your order has been received. Your billing details are as follows:<br>
 |    Product                     |       Qauntity                 | Price                                 |
 | :----------------------------: | :----------------------------: | :-----------------------------------: |
 @foreach ($order_data['items'] as $item)
-| {{$item['product_name']}}      | {{$item['quantity']}}          | &#8358;{{$item['price']}}             |
+| {{$item['product_name']}}      | {{$item['quantity']}}          | ${{$item['price']}}             |
 @endforeach
+| ------------------------------ | ------------------------------ | ------------------------------------- |
+| Delivery Fee                   |                                | ${{$order_data['delivery_fee']}}|
+| Total                          |                                | ${{$order_data['grand_total']}} |
 
-| Total                          |                                | &#8358;{{$order_data['grand_total']}} |
 
 @endcomponent
 

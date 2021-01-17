@@ -40,3 +40,27 @@ Route::group(['middleware' => 'auth:api'], function(){
 });
 
 Route::post('checkout/order', 'CheckoutController@place_order');
+Route::post('checkout/order/confirm', 'CheckoutController@confirm_order');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
