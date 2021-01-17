@@ -37,6 +37,7 @@ class PlaceOrderRequest extends BaseFormRequest
       'post_code' => 'required|string',
       'phone_number' => 'required|numeric',
       'notes' => 'nullable|string',
+      'callback_url' => 'required',
       'items.*.product_id' => 'required',
       'items.*.quantity' => 'required',
       'items.*.price' => 'required'

@@ -82,4 +82,9 @@ class PaymentService
       return  general_error_message($e->getMessage());
     }
   }
+
+  public function generate_payment_link($request)
+  {
+    
+  }
 }
