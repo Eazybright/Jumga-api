@@ -15,4 +15,8 @@ interface ProductRepositoryInterface
   public function get();
 
   public function get_by_id($product_id);
+
+  public function get_seller_subaccount_code($product_id);
+
+  public function get_dispatch_rider_subaccount_code($product_id);
 }

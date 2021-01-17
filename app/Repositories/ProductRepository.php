@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Repositories\Interfaces\ProductRepositoryInterface;
 use App\Models\Product;
+use Illuminate\Support\Facades\DB;
 
 class ProductRepository implements ProductRepositoryInterface
 {
@@ -63,5 +64,24 @@ class ProductRepository implements ProductRepositoryInterface
   public function get_by_id($product_id)
   {
     return Product::with('images')->where('id', $product_id)->first();
+  }
+
+  public function get_seller_subaccount_code($product_id)
+  {
+    $sql_query = "SELECT users.flutterwave_subaccount_id 
+                  FROM products
+                  INNER JOIN users ON products.user_id = users.id
+                  WHERE products.id = $product_id";
+    return DB::select($sql_query);
+  }
+
+  public function get_dispatch_rider_subaccount_code($product_id)
+  {
+    $sql_query = "SELECT users.flutterwave_subaccount_id 
+                  FROM products 
+                  INNER JOIN stores ON products.store_id = stores.id
+                  INNER JOIN users ON stores.dispatch_rider_id = users.id
+                  WHERE products.id = $product_id";
+    return DB::select($sql_query);
   }
 }

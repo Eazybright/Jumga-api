@@ -31,16 +31,10 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::get('/{product_id}', 'ProductsController@get_by_id')->withoutMiddleware('auth:api');
     Route::post('/', 'ProductsController@store');
     Route::put('/{product_id}', 'ProductsController@update');
-      // Route::get('/:id', 'HostelController@getHostel');
-      // Route::delete('/:id', 'HostelController@delete'); 
   });
 
   Route::group(['prefix' => 'stores'], function(){
     Route::get('/', 'StoreController@index')->withoutMiddleware('auth:api');
     Route::get('/{store_id}', 'StoreController@show')->withoutMiddleware('auth:api');
-    // Route::post('/', 'ProductsController@store');
-    // Route::put('/{product_id}', 'ProductsController@update');
-      // Route::get('/:id', 'HostelController@getHostel');
-      // Route::delete('/:id', 'HostelController@delete'); 
   });
 });

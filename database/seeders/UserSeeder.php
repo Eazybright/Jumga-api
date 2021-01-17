@@ -62,7 +62,7 @@ class UserSeeder extends Seeder
         'account_name' => 'Kolawole Ezekiel Damilare',
         'account_bank_code' => '058',
         'country' => 'Nigeria',
-        'flutterwave_subaccount_id' => 'RS_BBA8FFC88A34288F014FB7BAE3BC383C',
+        'flutterwave_subaccount_id' => 'RS_FEB5F23BEE9810D482222668C757F1A8',
         'created_at' => now(),
         'updated_at' => now()
       ]
