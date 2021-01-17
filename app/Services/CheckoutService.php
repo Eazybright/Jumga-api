@@ -87,16 +87,28 @@ class CheckoutService
       $params['payment_link'] = $create_payment_link;
       $params['order_number'] = $save_order->order_number;
       $params['status'] = $save_order->status;
-      $param['payment-status'] = $save_order->payment_status;
+      $param['payment_status'] = $save_order->payment_status;
 
       // send invoice to user(buyer)
       Notification::route('mail', $params['email'])
                   ->notify(new InvoiceCreated($params));
-
+      DB::commit();
       return $params;
     }catch(\Exception $e){
       DB::rollBack();
       throw $e;
     }  
+  }
+
+  public function confirm_order_payment($params)
+  {
+    // verify payment
+    // update order details
+    // send notification to the user(buyer) about the confirmed payment
+    // send notification to the seller about the product bought
+    /**
+     * TODO later sha
+     * Update the number of stock available for each product bought
+     */
   }
 }

@@ -107,14 +107,12 @@ class PaymentService
             [
               'id' => $payment_payload['seller_subaccount_code'],
               'transaction_charge_type' => 'percentage',
-              'transaction_charge' => ($payment_payload['seller_percentage'] * 100)
-              // 'transaction_split_ratio' => $payment_payload['seller_percentage'],
+              'transaction_charge' => $payment_payload['seller_percentage']
             ],
             [
               'id' => $payment_payload['rider_subaccount_code'],
               'transaction_charge_type' => 'percentage',
-              'transaction_charge' => ($payment_payload['rider_percentage'] * 100)
-              // 'transaction_split_ratio' => $payment_payload['rider_percentage'],
+              'transaction_charge' => $payment_payload['rider_percentage']
             ]
           ],
           'redirect_url' => $payment_payload['callback_url']
