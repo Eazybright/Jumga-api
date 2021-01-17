@@ -72,7 +72,8 @@ class ProductRepository implements ProductRepositoryInterface
                   FROM products
                   INNER JOIN users ON products.user_id = users.id
                   WHERE products.id = $product_id";
-    return DB::select($sql_query);
+    $result = DB::select($sql_query);
+    return $result[0];
   }
 
   public function get_dispatch_rider_subaccount_code($product_id)
@@ -82,6 +83,7 @@ class ProductRepository implements ProductRepositoryInterface
                   INNER JOIN stores ON products.store_id = stores.id
                   INNER JOIN users ON stores.dispatch_rider_id = users.id
                   WHERE products.id = $product_id";
-    return DB::select($sql_query);
+    $result =  DB::select($sql_query);
+    return $result[0];
   }
 }

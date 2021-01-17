@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +19,8 @@ Route::get('/', function () {
 });
 
 // Route::get('/all_transactions', 'TransactionController@getAllTransactions');
+
+Route::get('callback_endpoint', function(Request $request){
+  return $request->all();
+});
+

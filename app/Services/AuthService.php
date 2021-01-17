@@ -73,7 +73,7 @@ class AuthService
 
       //create account into the database
       $new_user->save();
-      Notification::send($new_user, new WelcomeMail($params['name']));
+      Notification::send($new_user, new WelcomeMail($params['name'])); 
 
       DB::commit();
       return "Registration successfull";

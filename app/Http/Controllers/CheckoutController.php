@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PlaceOrderRequest;
 use App\Services\CheckoutService;
-
+use App\Traits\ApiResponseMessage;
 
 class CheckoutController extends Controller
 {
+  use ApiResponseMessage;
+  
   protected $checkoutService;
 
   public function __construct(CheckoutService $checkoutService)

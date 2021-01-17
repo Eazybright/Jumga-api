@@ -38,3 +38,5 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::get('/{store_id}', 'StoreController@show')->withoutMiddleware('auth:api');
   });
 });
+
+Route::post('checkout/order', 'CheckoutController@place_order');

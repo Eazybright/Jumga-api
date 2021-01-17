@@ -5,7 +5,7 @@ namespace App\Repositories;
 use App\Repositories\Interfaces\OrderRepositoryInterface;
 use App\Models\Order;
 use App\Models\OrderItem;
-use App\Constants\Orderstatus;
+use App\Constants\OrderStatus;
 use App\Constants\PaymentStatus;
 
 class OrderRepository implements OrderRepositoryInterface
@@ -13,8 +13,8 @@ class OrderRepository implements OrderRepositoryInterface
   public function save($params)
   {
     $new_order = new Order;
-    $new_order->order_number = 'JUMGA-'.strtoupper(generateReferenceId());
-    $new_order->status = Orderstatus::PENDING;
+    $new_order->order_number = 'JUMGA-'.strtoupper(generateReferenceId()); 
+    $new_order->status = OrderStatus::PENDING;
     $new_order->grand_total = $params['grand_total'];
     $new_order->item_count = $params['item_count'];
     $new_order->payment_status = PaymentStatus::PENDING;
@@ -41,6 +41,7 @@ class OrderRepository implements OrderRepositoryInterface
       // save item into OrderItem DB
       foreach($params['items'] as $item){
         $new_order_item = new OrderItem;
+        $new_order_item->order_id = $new_order->id;
         $new_order_item->product_id = $item['product_id'];
         $new_order_item->quantity = $item['quantity'];
         $new_order_item->price = $item['price'];

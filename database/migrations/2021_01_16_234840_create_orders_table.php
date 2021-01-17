@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
       $table->string('status')->default('pending');
       $table->decimal('grand_total', 20, 6);
       $table->unsignedInteger('item_count');
-      $table->boolean('payment_status')->default('pending');
+      $table->string('payment_status')->default('pending');
       $table->string('payment_reference')->nullable();
       $table->string('first_name');
       $table->string('last_name');

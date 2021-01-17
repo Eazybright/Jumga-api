@@ -83,8 +83,53 @@ class PaymentService
     }
   }
 
-  public function generate_payment_link($request)
+  public function generate_payment_link($payment_payload)
   {
-    
+    $client = new Client(); 
+
+    try {
+      $response = $client->request('POST', env('RAVE_API_URL').'payments', [
+        'headers' => [
+          'Authorization' => 'Bearer ' .env('RAVE_SECRET_KEY'),
+          'Accept'        => 'application/json',
+        ],
+        'json' => [
+          'tx_ref' => $payment_payload['tx_ref'],
+          'amount' => $payment_payload['amount'],
+          'currency' => 'NGN',
+          'payment_options' => $payment_payload['payment_options'],
+          'customer' => [
+            'email' => $payment_payload['email'],
+            'phone_number' => $payment_payload['phone_number'],
+            'name' => $payment_payload['name']
+          ],
+          'subaccounts' => [
+            [
+              'id' => $payment_payload['seller_subaccount_code'],
+              'transaction_charge_type' => 'percentage',
+              'transaction_charge' => $payment_payload['seller_percentage']
+            ],
+            [
+              'id' => $payment_payload['rider_subaccount_code'],
+              'transaction_charge_type' => 'percentage',
+              'transaction_charge' => $payment_payload['rider_percentage']
+            ]
+          ],
+          'redirect_url' => $payment_payload['callback_url']
+        ]
+      ]);
+
+      if (intval($response->getStatusCode()) === 200) {
+        $result = json_decode($response->getBody(), true);
+        return $result['data'];
+      }else{ 
+        return  array(
+          'status' => false,
+          'message' => "unable to verify payment"
+        );
+      }       
+    }catch (\Exception $e) {
+      return  general_error_message($e->getMessage());
+    }
   }
 }
