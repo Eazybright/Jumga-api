@@ -1,13 +1,13 @@
 ### Introduction
-This is the backend for Jumga - <a href="https://github.com/tofmat/shopHack">https://github.com/tofmat/shopHack</a>. THis backend is built on the Laravel (php) framework.
+This is the backend for Jumga - <a href="https://github.com/tofmat/shopHack">https://github.com/tofmat/shopHack</a>. This backend is built on the Laravel (php) framework.
 
 On signup, seller details are collected and a settlement account is created on behalf of the seller using the Flutterwave subaccount feature. This allows the seller to receive payment seamlessly on the platform. Also a dispatch rider is assigned to each seller's store after registration, details about the dispatch rider can be found on seller dashboard. Dipatch riders are created manually using Laravel database seeding (information on how to setup dispatch riders would be discussed below).
 
 The sharing and breaking down of funds is processed automatically using the Flutterwave split payment feature. Based on the challenge description, the funds are shared using the following percentage ratio below:
-(a) Jumga gets a commission of 2.30%
-(b) Seller gets 90.7%
-(c) The dispatch rider gets 5.6%
-(d) Jumga gets another 1.4% delivery commission
+* (a) Jumga gets a commission of 2.30%
+* (b) Seller gets 90.7%
+* (c) The dispatch rider gets 5.6%
+* (d) Jumga gets another 1.4% delivery commission
 
 Since Jumga owns the system, the algorithm implemented was that funds are distributed specifically to the seller and the dispatch rider then the remaining funds goes to Jumga account. 
 
