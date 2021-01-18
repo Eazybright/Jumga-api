@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Traits\ApiResponseMessage;
+use Illuminate\Http\Request;
 use App\Http\Response;
 use App\Services\AuthService;
 use Carbon\Carbon;
@@ -76,5 +77,22 @@ class LoginController extends Controller
       'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString(),
     ];
     return  $this->SuccessResponse($data, 'User authenticated');    
+  }
+
+  /**
+   * Logout
+   * Sign out user
+   * @authenticated
+   * @response {
+   *    "status": true,
+   *    "message": "Logout successful",
+   *    "data":  "Successfully logged out"
+   * }
+   */
+  public function logout(Request $request)
+  {
+    $request->user()->token()->revoke();
+
+    return $this->SuccessResponse('Successfully logged out', 'Logout successful');    
   }
 }

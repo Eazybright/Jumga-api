@@ -20,7 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => '/auth', 'namespace' => 'Auth'], function(){
   Route::post('/register', 'RegisterController@register');
-  Route::post('/login', 'LoginController@login');// UserController
+  Route::post('/login', 'LoginController@login');
+  Route::get('/logout', 'LoginController@logout')->middleware('auth:api'); 
 });
 
 Route::group(['middleware' => 'auth:api'], function(){
