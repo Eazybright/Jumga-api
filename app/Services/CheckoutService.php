@@ -140,7 +140,7 @@ class CheckoutService
       Notification::route('mail', $seller_email_address->email)
                   ->notify(new NotifySellerForProductPurchase($check_order));
       
-
+      DB::commit();
       return $check_order;
 
       /**

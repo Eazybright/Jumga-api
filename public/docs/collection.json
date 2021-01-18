@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "JUMGA FOR FLUTTERWAVE API",
-        "_postman_id": "a5ed011a-92ca-4c69-8842-b7682b267ce5",
+        "_postman_id": "74b43061-1de1-4214-938b-a1f34c863053",
         "description": "This is the api docs for backend implementation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"est\",\n    \"email\": \"illum\",\n    \"password\": \"minus\",\n    \"phone_number\": \"sit\",\n    \"role\": \"debitis\",\n    \"account_number\": \"accusantium\",\n    \"account_name\": \"rem\",\n    \"account_bank_code\": 10,\n    \"country\": \"sed\",\n    \"image\": \"ut\",\n    \"transaction_id\": 18,\n    \"location\": \"quia\",\n    \"description\": \"quidem\",\n    \"name_of_store\": \"neque\"\n}"
+                            "raw": "{\n    \"name\": \"sapiente\",\n    \"email\": \"asperiores\",\n    \"password\": \"non\",\n    \"phone_number\": \"aspernatur\",\n    \"role\": \"sed\",\n    \"account_number\": \"dicta\",\n    \"account_name\": \"maiores\",\n    \"account_bank_code\": 6,\n    \"country\": \"officia\",\n    \"image\": \"laboriosam\",\n    \"transaction_id\": 16,\n    \"location\": \"vitae\",\n    \"description\": \"quod\",\n    \"name_of_store\": \"aliquam\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -74,7 +74,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"email\": \"laboriosam\",\n    \"password\": \"qui\"\n}"
+                            "raw": "{\n    \"email\": \"et\",\n    \"password\": \"ex\"\n}"
                         },
                         "description": "",
                         "auth": {
@@ -247,7 +247,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "pariatur",
+                                    "value": "tenetur",
                                     "description": ""
                                 }
                             ]
@@ -371,7 +371,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "sit",
+                                    "value": "aspernatur",
                                     "description": ""
                                 }
                             ]
@@ -408,7 +408,7 @@
                                 {
                                     "id": "client_id",
                                     "key": "client_id",
-                                    "value": "qui",
+                                    "value": "eligendi",
                                     "description": ""
                                 }
                             ]
@@ -532,7 +532,7 @@
                                 {
                                     "id": "token_id",
                                     "key": "token_id",
-                                    "value": "enim",
+                                    "value": "illo",
                                     "description": ""
                                 }
                             ]
@@ -565,6 +565,35 @@
                             "path": "\/",
                             "query": [],
                             "raw": "https:\/\/{{baseUrl}}\/\/"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "callback_endpoint",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "callback_endpoint",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/callback_endpoint"
                         },
                         "method": "GET",
                         "header": [
@@ -633,7 +662,7 @@
                                 {
                                     "id": "product_id",
                                     "key": "product_id",
-                                    "value": "consectetur",
+                                    "value": "iure",
                                     "description": ""
                                 }
                             ]
@@ -683,32 +712,32 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "rerum",
+                                    "value": "sequi",
                                     "type": "text"
                                 },
                                 {
                                     "key": "description",
-                                    "value": "consequatur",
+                                    "value": "temporibus",
                                     "type": "text"
                                 },
                                 {
                                     "key": "price",
-                                    "value": 13,
+                                    "value": 20,
                                     "type": "text"
                                 },
                                 {
                                     "key": "number_of_stock",
-                                    "value": 13,
+                                    "value": 10,
                                     "type": "text"
                                 },
                                 {
                                     "key": "store_id",
-                                    "value": 11,
+                                    "value": 14,
                                     "type": "text"
                                 },
                                 {
                                     "key": "delivery_fee",
-                                    "value": 1,
+                                    "value": 12,
                                     "type": "text"
                                 },
                                 {
@@ -735,7 +764,7 @@
                                 {
                                     "id": "product_id",
                                     "key": "product_id",
-                                    "value": "voluptatibus",
+                                    "value": "aliquam",
                                     "description": ""
                                 }
                             ]
@@ -756,22 +785,22 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "occaecati",
+                                    "value": "distinctio",
                                     "type": "text"
                                 },
                                 {
                                     "key": "description",
-                                    "value": "alias",
+                                    "value": "velit",
                                     "type": "text"
                                 },
                                 {
                                     "key": "price",
-                                    "value": 20,
+                                    "value": 17,
                                     "type": "text"
                                 },
                                 {
                                     "key": "number_of_stock",
-                                    "value": 7,
+                                    "value": 18,
                                     "type": "text"
                                 },
                                 {
@@ -781,7 +810,7 @@
                                 },
                                 {
                                     "key": "store_id",
-                                    "value": 4,
+                                    "value": 17,
                                     "type": "text"
                                 },
                                 {
@@ -792,6 +821,76 @@
                             ]
                         },
                         "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Products Checkout",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create Order\nThis endpoint should create user order and setup payment link\ngrand_total",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/checkout\/order",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/checkout\/order"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"grand_total\": \"enim\",\n    \"sub_total\": \"et\",\n    \"delivery_fee\": \"aspernatur\",\n    \"item_count\": \"et\",\n    \"first_name\": \"quod\",\n    \"last_name\": \"autem\",\n    \"company_name\": \"eos\",\n    \"address\": \"reprehenderit\",\n    \"city\": \"temporibus\",\n    \"country\": \"consequuntur\",\n    \"state\": \"veritatis\",\n    \"email\": \"eum\",\n    \"post_code\": \"eos\",\n    \"phone_number\": \"amet\",\n    \"notes\": \"laboriosam\",\n    \"callback_url\": \"molestiae\",\n    \"items\": \"quidem\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Confirm Payment\nThis endpoint confirms payment that has been made",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/checkout\/order\/confirm",
+                            "query": [],
+                            "raw": "https:\/\/{{baseUrl}}\/api\/checkout\/order\/confirm"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"transaction_id\": \"reiciendis\",\n    \"order_number\": \"doloribus\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": []
                 }
@@ -843,7 +942,7 @@
                                 {
                                     "id": "store_id",
                                     "key": "store_id",
-                                    "value": "aut",
+                                    "value": "odio",
                                     "description": ""
                                 }
                             ]
