@@ -16,6 +16,7 @@ class StoreRepository implements StoreRepositoryInterface
     $new_store->image = $params['image_url'];
     $new_store->user_id = $user_id;
     $new_store->dispatch_rider_id = mt_rand(1,3); //assign dispatch rider id between 1 and 3
+    $new_store->public_reference_id = generateReferenceId();
     return $new_store->save();
   }
 
