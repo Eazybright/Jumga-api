@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\OrderItem;
 use App\Constants\OrderStatus;
 use App\Constants\PaymentStatus;
+use Illuminate\Support\Facades\DB;
 
 class OrderRepository implements OrderRepositoryInterface
 {
@@ -52,5 +53,21 @@ class OrderRepository implements OrderRepositoryInterface
       }
     }
     return $new_order;   
+  }
+
+  public function get_order($order_number)
+  {
+    return Order::where('order_number', $order_number)->first();
+  }
+
+  public function get_seller_email_address($order_id)
+  {
+    $sql_query = "SELECT users.email 
+                  FROM orders
+                  INNER JOIN products ON orders.id = products.id
+                  INNER JOIN users ON products.user_id = users.id
+                  WHERE orders.id = $order_id";
+    $result = DB::select($sql_query);
+    return $result[0];
   }
 }

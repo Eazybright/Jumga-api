@@ -31,11 +31,6 @@ class Order extends Model
     'notes'
   ];
 
-  protected $casts = [
-    'payment_status' => 'boolean'
-  ];
-
-
   public function items()
   {
     return $this->hasMany('App\Models\OrderItem');

@@ -45,7 +45,7 @@ class CheckoutController extends Controller
                 $data['message'], 400);
       }
 
-      return $this->SuccessResponse($data, "Order confrimed successfully", 201);
+      return $this->SuccessResponse($data, "Order confirmed successfully", 201);
     }catch(\Exception $e) {
       return $this->ExceptionResponse($e);
     }

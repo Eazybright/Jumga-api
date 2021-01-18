@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\DB;
 use App\Services\PaymentService;
 use Illuminate\Support\Facades\Notification;
 use App\Notifications\InvoiceCreated;
+use App\Notifications\InvoicePaid;
+use App\Notifications\NotifySellerForProductPurchase;
+use App\Constants\OrderStatus;
+use App\Constants\PaymentStatus;
 
 class CheckoutService
 {
@@ -103,12 +107,49 @@ class CheckoutService
   public function confirm_order_payment($params)
   {
     // verify payment
-    // update order details
-    // send notification to the user(buyer) about the confirmed payment
-    // send notification to the seller about the product bought
-    /**
-     * TODO later sha
-     * Update the number of stock available for each product bought
-     */
+    $verify_payment = $this->paymentService->verify_payment($params['transaction_id']);
+    if(isset($verify_payment['status']) && $verify_payment['status'] == false ){
+      return $verify_payment;
+    }
+
+    DB::beginTransaction();
+    try{
+      // check if order exists 
+      $check_order = $this->orderRepository->get_order($params['order_number']);
+      if(!$check_order){
+        return general_error_message('Order number not found');
+      }
+
+      // update order details
+      $check_order->status = OrderStatus::PROCESSING;
+      $check_order->payment_status = PaymentStatus::COMPLETED;
+      $check_order->payment_reference = $verify_payment['tx_ref'];
+      $check_order->save();
+
+      // get seller email address
+      $seller_email_address = $this->orderRepository->get_seller_email_address($check_order->id);
+      if(!$seller_email_address){
+        return general_error_message('Seller details not found');
+      }
+
+      // send notification to the user(buyer) about the confirmed payment
+      Notification::route('mail', $check_order->email)
+                  ->notify(new InvoicePaid($check_order));
+      
+      // send notification to the seller about the product bought
+      Notification::route('mail', $seller_email_address->email)
+                  ->notify(new NotifySellerForProductPurchase($check_order));
+      
+
+      return $check_order;
+
+      /**
+       * TODO later sha
+       * Update the number of stock available for each product bought
+       */
+    }catch(\Exception $e){
+      DB::rollBack();
+      throw $e;
+    }
   }
 }
