@@ -96,7 +96,7 @@ class PaymentService
         'json' => [
           'tx_ref' => $payment_payload['tx_ref'],
           'amount' => $payment_payload['amount'],
-          'currency' => 'GBP',
+          'currency' => 'USD',
           'payment_options' => $payment_payload['payment_options'],
           'customer' => [
             'email' => $payment_payload['email'],
@@ -115,7 +115,7 @@ class PaymentService
               'transaction_charge' => $payment_payload['rider_percentage']
             ]
           ],
-          'redirect_url' => $payment_payload['callback_url']
+          'redirect_url' => env('APP_URL').'api/checkout/order/confirm'
         ]
       ]);
 

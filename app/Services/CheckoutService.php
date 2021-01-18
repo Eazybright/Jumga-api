@@ -12,6 +12,7 @@ use App\Notifications\InvoicePaid;
 use App\Notifications\NotifySellerForProductPurchase;
 use App\Constants\OrderStatus;
 use App\Constants\PaymentStatus;
+use App\Helpers\OrderNumberHelper;
 
 class CheckoutService
 {
@@ -79,7 +80,6 @@ class CheckoutService
         'seller_percentage' => self::SELLER_TRANSACTION_PERCENTAGE,
         'rider_subaccount_code' =>  $rider_subaccount_code->flutterwave_subaccount_id,
         'rider_percentage' => self::RIDER_TRANSACTION_PERCENTAGE,
-        'callback_url' => $params['callback_url']
       ];
 
       $create_payment_link = $this->paymentService->generate_payment_link($payment_payload);
@@ -113,21 +113,23 @@ class CheckoutService
     }
 
     DB::beginTransaction();
-    try{
-      // check if order exists 
-      $check_order = $this->orderRepository->get_order($params['order_number']);
+    try{      
+      // get order details and update with the payment info
+      $check_order = $this->orderRepository->get_order($verify_payment);
       if(!$check_order){
-        return general_error_message('Order number not found');
+        return general_error_message('Order details not found');
       }
 
       // update order details
       $check_order->status = OrderStatus::PROCESSING;
       $check_order->payment_status = PaymentStatus::COMPLETED;
-      $check_order->payment_reference = $verify_payment['tx_ref'];
+      $check_order->payment_reference = $verify_payment['flw_ref'];
+      $check_order->transaction_id = $verify_payment['tx_ref'];
       $check_order->save();
 
       // get seller email address
       $seller_email_address = $this->orderRepository->get_seller_email_address($check_order->id);
+
       if(!$seller_email_address){
         return general_error_message('Seller details not found');
       }

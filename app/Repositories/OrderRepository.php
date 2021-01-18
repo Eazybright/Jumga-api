@@ -55,19 +55,26 @@ class OrderRepository implements OrderRepositoryInterface
     return $new_order;   
   }
 
-  public function get_order($order_number)
+  public function get_order($params)
   {
-    return Order::where('order_number', $order_number)->first();
+    return Order::where([
+      ['email', $params['customer']['email']],
+      ['phone_number', $params['customer']['phone_number']],
+      ['grand_total', $params['amount']]
+      ])->first();
   }
 
   public function get_seller_email_address($order_id)
   {
-    $sql_query = "SELECT users.email 
+    $sql_query = "SELECT DISTINCT users.email 
                   FROM orders
-                  INNER JOIN products ON orders.id = products.id
+                  INNER JOIN order_items ON orders.id = order_items.order_id
+                  INNER JOIN products ON order_items.product_id = products.id
                   INNER JOIN users ON products.user_id = users.id
-                  WHERE orders.id = $order_id";
+                  WHERE orders.id = $order_id
+                  LIMIT 1";
     $result = DB::select($sql_query);
+    // return $result;
     return $result[0];
   }
 }
