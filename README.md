@@ -1,5 +1,5 @@
 ### Introduction
-This is the backend for Jumga - <a href="https://github.com/tofmat/shopHack">https://github.com/tofmat/shopHack</a>. This backend is built on the Laravel (php) framework.
+This is the backend for Jumga (UI) - <a href="https://github.com/tofmat/shopHack">https://github.com/tofmat/shopHack</a>. This backend is built on the Laravel (php) framework.
 
 On signup, seller details are collected and a settlement account is created on behalf of the seller using the Flutterwave subaccount feature. This allows the seller to receive payment seamlessly on the platform. Also a dispatch rider is assigned to each seller's store after registration, details about the dispatch rider can be found on seller dashboard. Dipatch riders are created manually using Laravel database seeding (information on how to setup dispatch riders would be discussed below).
 
